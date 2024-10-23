@@ -198,6 +198,9 @@ elif page == "Consumption Habits & Sleep Efficiency":
             (filtered_df["Caffeine_consumption"] >= caffeine_range[0]) &
             (filtered_df["Caffeine_consumption"] <= caffeine_range[1])
         ]
+
+        return filtered_df
+        
         # Apply the filters to the dataset
     filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
 # ---------------Heatmap moved-------------
@@ -298,9 +301,9 @@ elif page == "Consumption Habits & Sleep Efficiency":
             (filtered_df["Caffeine_consumption"] >= caffeine_range[0]) &
             (filtered_df["Caffeine_consumption"] <= caffeine_range[1])
         ]
-    """
-        return filtered_df
     
+        return filtered_df
+    """
     # Apply the filters to the dataset
     #filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
     
