@@ -116,7 +116,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
         """)
     # Key Takeaways section
-    st.subheader("Key Takeaways")
+    st.subheader("Key Insights")
     st.markdown("""
     - **Caffeine Consumption**:
       - Negative impact on **Light Sleep**.
@@ -454,6 +454,28 @@ elif page == "Work-Related Stress & Sleep":
     st.header("Impact of Work-Related Stress on Sleep")
     col1, col2 = st.columns(2)
 
+    # KEY TERMS
+    with st.expander("**Key Terms**"):
+        st.markdown("""
+        - **Sleep Efficiency Duration**: The duration of time spent asleep while in bed, compared to total time spent in bed.
+        - **REM Sleep Duration**: The stage of sleep spent in REM sleep, associated with dreaming and cognitive functions like memory and mood regulation.
+        - **Deep Sleep Duration**: The stage of sleep where the body focuses on physical recovery and growth, as well as immune function. It's the most restorative phase of sleep.
+        - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
+        """)
+    # Key Takeaways section
+    st.subheader("Key Takeaways")
+    st.markdown("""
+    - **Caffeine Consumption**:
+      - Negative impact on **Light Sleep**.
+      - **Stable Sleep Duration** with moderate caffeine intake.
+      - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
+    - **Alcohol Consumption**:
+      - Initial increase in **Light Sleep**.
+      - Decrease in **Light Sleep** with higher alcohol consumption.
+      - **Stable Sleep Duration** regardless of intake.
+    - **Caffeine’s Impact on REM Sleep**:
+      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
+    """)
     # Graph 7: Job Security vs Sleep Loss - Scatter plot
     with col1:
         
