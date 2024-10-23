@@ -223,11 +223,17 @@ elif page == "Consumption Habits & Sleep Efficiency":
     
     # Plot heatmap with seaborn
     plt.figure(figsize=(10, 6))
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
+    
+    # Create the heatmap and store it in 'ax'
+    ax = sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
     plt.title('Sleep Efficiency by Age Group and Gender')
+    
+    # Set the background colour
+    ax.set_facecolor('#f0f0f0')  # You can replace '#f0f0f0' with your desired hex colour
     
     # Show the heatmap using Streamlit
     st.pyplot(plt)
+
     
 
 
