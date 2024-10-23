@@ -3,6 +3,35 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+import streamlit as st
+
+# Set up the page configuration (optional)
+st.set_page_config(layout="wide")
+
+# Use the raw URL of the image from your GitHub repo
+background_image_url = "https://github.com/cnhannon/sleeeeeeeeep/raw/main/shutterstock_160257086.jpg"
+
+# Inject custom CSS for the background image
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Streamlit app content
+st.title("Streamlit App with Background Image")
+st.write("This app uses a background image from a GitHub repository.")
+
+
+
 # Load datasets
 sleep_data = pd.read_csv("sleep_data_final.csv")
 health_and_lifestyle_data = pd.read_csv("Sleep_health_and_lifestyle_dataset.csv")
