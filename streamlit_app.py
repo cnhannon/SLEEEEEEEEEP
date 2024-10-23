@@ -299,21 +299,32 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # -----------------------------------------------------------------------
     
-    # Heatmap: Combined Effects of Age Group & Gender on Sleep Efficiency
-    if "Age_Group" not in filtered_df.columns:
-        filtered_df["Age_Group"] = pd.cut(filtered_df["Age"], bins=[0, 19, 29, 39, 49, 59, 69], labels=["Teenagers", "20s", "30s", "40s", "50s", "60s"])
     
+    # Create 'Age_Group' if it doesn't exist
+    if "Age_Group" not in filtered_df.columns:
+        filtered_df["Age_Group"] = pd.cut(filtered_df["Age"], bins=[0, 19, 29, 39, 49, 59, 69],
+                                           labels=["Teenagers", "20s", "30s", "40s", "50s", "60s"])
+    
+    # Create the pivot table for Sleep Efficiency
     heatmap_data = filtered_df.pivot_table(
-        values='Sleep_efficiency', index='Age_Group', columns='Gender', aggfunc='mean'
+        values='Sleep_efficiency_hours', index='Age_Group', columns='Gender', aggfunc='mean' #please add _hours to sleep efficiency so that it can be shown in hours not decimal
     )
     
-    # Plot heatmap with seaborn
-    plt.figure(figsize=(10, 6))
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
-    plt.title('Sleep Efficiency by Age Group and Gender')
+    # Set up the heatmap
+    plt.figure(figsize=(10, 6), facecolor="#FAD8D3")  # Light pink background for the figure
+    ax = sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
+    
+    # Set background color for the axes
+    ax.set_facecolor("#FAD8D3")  # Light pink background for the axes
+    
+    # Title and labels
+    plt.title('Sleep Efficiency by Age Group and Gender', fontsize=16)
+    plt.xlabel('Gender', fontsize=12)
+    plt.ylabel('Age Group', fontsize=12)
     
     # Show the heatmap using Streamlit
     st.pyplot(plt)
+
 
     # Display the filtered data summary
     #st.write(f"Filtered Data: {len(filtered_df)} Participants")
