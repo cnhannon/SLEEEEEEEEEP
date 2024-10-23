@@ -453,10 +453,8 @@ elif page == "Work-Related Stress & Sleep":
         unsafe_allow_html=True
     )
     st.header("Impact of Work-Related Stress on Sleep")
-    col1, col2 = st.columns(2)
 
     # KEY TERMS
-    st.subheader("blah blah")
 #------------
     with st.expander("**Key Terms**"):
         st.markdown("""
@@ -474,6 +472,8 @@ elif page == "Work-Related Stress & Sleep":
       - Our regression analysis highlights **Lack of Control** and **Insufficient Time Off** as the largest contributors to sleep-related stress.
     """)
 #====================
+
+    col1, col2 = st.columns(2)
     # Graph 7: Job Security vs Sleep Loss - Scatter plot
     with col1:
         
