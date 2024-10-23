@@ -110,10 +110,10 @@ elif page == "Consumption Habits & Sleep Efficiency":
     st.write(":information_source: **Key Sleep Definitions**")
     with st.expander("Click to view definitions"):
         st.markdown("""
-        **Sleep Efficiency Duration**: The duration of time spent asleep while in bed, compared to total time spent in bed.
-        **REM Sleep Duration**: The stage of sleep spent in REM sleep, associated with dreaming and cognitive functions like memory and mood regulation.
-        **Deep Sleep Duration**: The stage of sleep where the body focuses on physical recovery and growth, as well as immune function. It's the most restorative phase of sleep.
-        **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
+        - **Sleep Efficiency Duration**: The duration of time spent asleep while in bed, compared to total time spent in bed.
+        - **REM Sleep Duration**: The stage of sleep spent in REM sleep, associated with dreaming and cognitive functions like memory and mood regulation.
+        - **Deep Sleep Duration**: The stage of sleep where the body focuses on physical recovery and growth, as well as immune function. It's the most restorative phase of sleep.
+        - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
         """)
     # Key Takeaways section
     st.subheader("Key Takeaways")
