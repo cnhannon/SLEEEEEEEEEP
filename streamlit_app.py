@@ -545,7 +545,11 @@ elif page == "Work-Related Stress & Sleep":
         significant_coeffs['Variable'] = significant_coeffs['Variable'].map(variable_labels)
         
         # Plot the bar chart with the updated labels
-        fig = px.bar(significant_coeffs.head(5), x='Coefficient', y='Variable', orientation='h', 
+        fig = px.bar(significant_coeffs.head(5),
+                     x='Coefficient',
+                     y='Variable',
+                     orientation='h', 
+                     color_discrete_sequence=['#A58471']
                      title='Top 5 Predictors of Sleep Loss')
         
         # Show the updated plot in Streamlit
