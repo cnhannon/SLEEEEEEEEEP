@@ -244,7 +244,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     # ------------------------------------------
 
     # Deleted 3 graphs (scatter, candlestick, histogram)
-   """
+    """
     import pandas as pd
     import plotly.express as px
     import plotly.graph_objects as go
