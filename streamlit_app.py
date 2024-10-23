@@ -30,7 +30,7 @@ if page == "Introduction":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/07.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/06.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -78,7 +78,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/08.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/07.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -356,7 +356,7 @@ elif page == "Lifestyle Factors & Stress":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/09.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/08.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -522,6 +522,30 @@ elif page == "Lifestyle Factors & Stress 2":
 
 # --------LIFESTYLE AND WELLBEING ANALYSIS---------------
 elif page == "Lifestyle and Wellbeing Analysis":
+        st.markdown(
+        """
+        <style>
+        /* Apply the background image to the entire app */
+        .stApp {
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/09.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        /* Optional: Customize the sidebar to have a slight transparency */
+        .css-1d391kg {
+            background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
+        }
+    
+        /* Optional: Customize the main content area background (if needed) */
+        .css-18e3th9 {
+            background-color: transparent;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.header("Lifestyle and Wellbeing Analysis")
     col1, col2, col3 = st.columns(3)
 
