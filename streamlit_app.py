@@ -15,8 +15,16 @@ rail_workers_data = pd.read_csv("rail_workers_sleep_data.csv")
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Introduction", "Consumption Habits & Sleep Efficiency", "Lifestyle Factors & Stress", "Work-Related Stress & Sleep", "Conclusion"])
 
-# Page 1: Introduction
+
+
+# INTRODUCTION PAGE
+
+
+
 if page == "Introduction":
+
+    # START (TO ADD BACKGROUND IMAGE) - COPY AND PASTE BETWEEN START AND END. WILL NEED TO CHANGE IMAGE URL.
+    
     st.markdown(
         """
         <style>
@@ -42,6 +50,8 @@ if page == "Introduction":
         unsafe_allow_html=True
     )
 
+    # END
+
     st.title("Sleep, Lifestyle, and Job Factors: A Data Analysis Journey")
     st.header("Introduction: The Modern Sleep Problem")
     st.write("""
@@ -53,7 +63,10 @@ if page == "Introduction":
     - Rail Workers' Sleep Data: Focuses on job-related stress and its impact on rail workers' sleep quality.
     """)
 
-# Page 2: Consumption Habits & Sleep Efficiency
+
+# CONSUMPTION HABITS AND SLEEP EFFICIENCY
+
+
 elif page == "Consumption Habits & Sleep Efficiency":
     st.markdown(
         """
