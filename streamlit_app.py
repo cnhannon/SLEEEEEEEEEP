@@ -130,26 +130,9 @@ elif page == "Consumption Habits & Sleep Efficiency":
       - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
     """)
     # ------------------------------------------
-    
-    # Graph 1: Caffeine vs Sleep Efficiency - Scatter plot with distinct color
-    with col1:
-        fig1 = px.scatter(sleep_data, x="Caffeine_consumption", y="Sleep_efficiency", trendline="ols", 
-                          title="Caffeine Consumption vs Sleep Efficiency", color_discrete_sequence=["#FF6347"])
-        st.plotly_chart(fig1, use_container_width=True)
-    
-    # Graph 2: Alcohol vs Sleep Efficiency - Box plot for better comparison
-    with col2:
-        fig2 = px.box(sleep_data, x="Alcohol_consumption", y="Sleep_efficiency", title="Alcohol Consumption vs Sleep Efficiency", color_discrete_sequence=["#20B2AA"])
-        st.plotly_chart(fig2, use_container_width=True)
-    
-    # Graph 3: Sleep Efficiency by Gender - Histogram
-    with col3:
-        fig3 = px.histogram(sleep_data, x="Sleep_efficiency", color="Gender", title="Sleep Efficiency Distribution by Gender", color_discrete_sequence=["#FF1493", "#1E90FF"])
-        st.plotly_chart(fig3, use_container_width=True)
 
-
-
-
+    # Deleted 3 graphs (scatter, candlestick, histogram)
+   
     import pandas as pd
     import plotly.express as px
     import plotly.graph_objects as go
