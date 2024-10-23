@@ -138,7 +138,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         for gender, count in genders.items():
             st.metric(label=gender, value=count)
         # Additional note
-        st.subheader("Note: Gender counts are based on participant responses.")
+
     # Average consumption metrics scorecard in column 3
     with col3:
         average_caffeine = 22.345133  # Average caffeine consumption in mg
@@ -154,7 +154,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         st.write("1 oz of alcohol is approximately equal to 30 milliliters.")
         st.write("5 grams of caffeine is approximately equal to 30 mg of caffeine.")
         # Additional note
-        st.subheader("Note: These values represent the average consumption levels in the dataset.")
+
 
  #---------------------------------------------------
     
