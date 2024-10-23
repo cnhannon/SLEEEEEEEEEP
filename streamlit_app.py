@@ -3,30 +3,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# -----------------LAYOUT------------------
-
-# Set up the page configuration (optional)
-st.set_page_config(layout="wide")
-
-# Use the raw URL of the image from your GitHub repo
-background_image_url = "https://github.com/cnhannon/sleeeeeeeeep/raw/main/shutterstock_160257086.jpg"
-
-# Inject custom CSS for the background image
-st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background-image: url("{background_image_url}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
 # Load datasets
 sleep_data = pd.read_csv("sleep_data_final.csv")
 health_and_lifestyle_data = pd.read_csv("Sleep_health_and_lifestyle_dataset.csv")
@@ -51,6 +27,28 @@ if page == "Introduction":
     - Health and Lifestyle Data: Examines how lifestyle attributes such as physical activity and stress affect sleep.
     - Rail Workers' Sleep Data: Focuses on job-related stress and its impact on rail workers' sleep quality.
     """)
+    # -----------------LAYOUT------------------
+
+# Set up the page configuration (optional)
+    st.set_page_config(layout="wide")
+
+# Use the raw URL of the image from your GitHub repo
+    background_image_url = "https://github.com/cnhannon/sleeeeeeeeep/raw/main/shutterstock_160257086.jpg"
+
+# Inject custom CSS for the background image
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("{background_image_url}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Page 2: Consumption Habits & Sleep Efficiency
 elif page == "Consumption Habits & Sleep Efficiency":
