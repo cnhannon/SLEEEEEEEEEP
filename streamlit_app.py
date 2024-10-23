@@ -178,16 +178,16 @@ elif page == "Consumption Habits & Sleep Efficiency":
     # ------------------------------------------
 
     # Deleted 3 graphs (scatter, candlestick, histogram)
-    """
+    
     import pandas as pd
     import plotly.express as px
     import plotly.graph_objects as go
     import seaborn as sns
     import matplotlib.pyplot as plt
     import streamlit as st
-    """
+    
     # Load the CSV file you uploaded (adjust the path if necessary)
-    #df = pd.read_csv("sleep_data_final.csv")  # Update the path
+    df = pd.read_csv("sleep_data_final.csv")  # Update the path
     
     # Define age ranges for filtering
     age_ranges = {
@@ -221,16 +221,8 @@ elif page == "Consumption Habits & Sleep Efficiency":
     caffeine_range = st.sidebar.slider(
         'Caffeine Consumption:', min_value=0, max_value=int(df['Caffeine_consumption'].max()), value=(0, 200)
     )
+
     
-    import pandas as pd
-    import plotly.express as px
-    import plotly.graph_objects as go
-    import seaborn as sns
-    import matplotlib.pyplot as plt
-    import streamlit as st
-    
-    # Load the CSV file you uploaded (adjust the path if necessary)
-    df = pd.read_csv("sleep_data_final.csv")  # Update the path
     
  # -----------------------------
     # Function to filter data based on the selections
