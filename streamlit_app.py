@@ -337,7 +337,6 @@ elif page == "Lifestyle Factors & Stress":
     )
     
     st.header("Lifestyle Factors and Stress")
-    col1, col2, col3 = st.columns(3)
 
     st.subheader("Sleep Efficiency Dataset")
     # Button with an ":information_source:" icon and expander for definitions
@@ -365,6 +364,7 @@ elif page == "Lifestyle Factors & Stress":
       - Increased stress correlates with shorter sleep and poorer sleep quality.
     """)
 
+    col1, col2, col3 = st.columns(3)
 
     # Graph 4: Stress vs Sleep Quality - Scatter plot
     with col1:
