@@ -174,6 +174,9 @@ elif page == "Consumption Habits & Sleep Efficiency":
           - **Stable Sleep Duration** regardless of intake.
         """)
 
+
+        # Apply the filters to the dataset
+    filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
 # ---------------Heatmap moved-------------
     with col2:
         # Create 'Age_Group' if it doesn't exist
@@ -276,7 +279,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         return filtered_df
     
     # Apply the filters to the dataset
-    filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
+    #filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
     
     col1, col2, col3=st.columns(3)
 
