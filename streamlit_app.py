@@ -115,6 +115,34 @@ elif page == "Consumption Habits & Sleep Efficiency":
         - **Deep Sleep Duration**: The stage of sleep where the body focuses on physical recovery and growth, as well as immune function. It's the most restorative phase of sleep.
         - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
         """)
+        # -------ADDING--------
+        number_of_participants = 452  # Total number of participants
+        age_range = "9 - 69 years"
+        genders = {
+            "Male": 228,   # Example count of male participants
+            "Female": 224, # Example count of female participants
+            "Other": 0     # Example count of other genders
+        }
+        
+        # Title of the scorecard
+        st.header("Participant Demographics")
+        
+        # Displaying number of participants
+        st.metric(label="Number of Participants", value=number_of_participants)
+        
+        # Displaying age range
+        st.metric(label="Age Range", value=age_range)
+        
+        # Displaying gender distribution
+        st.subheader("Gender Distribution")
+        for gender, count in genders.items():
+            st.metric(label=gender, value=count)
+
+        # Additional note
+        st.subheader("Note: Gender counts are based on participant responses.")
+
+ #---------------------------------------------------
+    
     # Key Insights section
     st.subheader("Key Insights")
     st.markdown("""
@@ -310,6 +338,31 @@ elif page == "Lifestyle Factors & Stress":
     
     st.header("Lifestyle Factors and Stress")
     col1, col2, col3 = st.columns(3)
+
+        st.subheader("Sleep Efficiency Dataset")
+    # Button with an ":information_source:" icon and expander for definitions
+    #st.write(":information_source: **Key Sleep Definitions**")
+    with st.expander("**Key Terms**"):
+        st.markdown("""
+        - **key term**: def.
+        - **key term**: def.
+        - **key term**: def.
+        - **key term**: def.
+        """)
+    # Key Insights section
+    st.subheader("Key Insights")
+    st.markdown("""
+    - **Caffeine’s Impact on REM Sleep**:
+      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
+    - **Caffeine Consumption**:
+      - Negative impact on **Light Sleep**.
+      - **Stable Sleep Duration** with moderate caffeine intake.
+      - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
+    - **Alcohol Consumption**:
+      - Initial increase in **Light Sleep**.
+      - Decrease in **Light Sleep** with higher alcohol consumption.
+      - **Stable Sleep Duration** regardless of intake.
+    """)
 
     # Graph 4: Stress vs Sleep Quality - Scatter plot
     with col1:
