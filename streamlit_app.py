@@ -17,6 +17,23 @@ page = st.sidebar.radio("Go to", ["Introduction", "Consumption Habits & Sleep Ef
 
 # Page 1: Introduction
 if page == "Introduction":
+    st.markdown(
+        """
+        <style>
+        .reportview-container {
+            background: url('https://example.com/page1-background.jpg');
+            background-size: cover;
+        }
+        .sidebar .sidebar-content {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .main {
+            background-color: #FFFFFF;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.title("Sleep, Lifestyle, and Job Factors: A Data Analysis Journey")
     st.header("Introduction: The Modern Sleep Problem")
     st.write("""
