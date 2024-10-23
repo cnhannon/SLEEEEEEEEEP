@@ -229,7 +229,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     plt.title('Sleep Efficiency by Age Group and Gender')
     
     # Set the background colour
-    ax.set_facecolor('#f0f0f0')  # You can replace '#f0f0f0' with your desired hex colour
+    ax.set_facecolor('#0D1117')  # You can replace '#f0f0f0' with your desired hex colour
     
     # Show the heatmap using Streamlit
     st.pyplot(plt)
