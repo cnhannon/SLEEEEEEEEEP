@@ -173,6 +173,17 @@ elif page == "Consumption Habits & Sleep Efficiency":
           - Decrease in **Light Sleep** with higher alcohol consumption.
           - **Stable Sleep Duration** regardless of intake.
         """)
+
+    import pandas as pd
+    import plotly.express as px
+    import plotly.graph_objects as go
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    import streamlit as st
+    
+    # Load the CSV file you uploaded (adjust the path if necessary)
+    df = pd.read_csv("sleep_data_final.csv")  # Update the path
+    
  # -----------------------------
     # Function to filter data based on the selections
     def filter_data(df, age_group, gender, alcohol_range, caffeine_range):
@@ -233,16 +244,16 @@ elif page == "Consumption Habits & Sleep Efficiency":
     # ------------------------------------------
 
     # Deleted 3 graphs (scatter, candlestick, histogram)
-   
+   """
     import pandas as pd
     import plotly.express as px
     import plotly.graph_objects as go
     import seaborn as sns
     import matplotlib.pyplot as plt
     import streamlit as st
-    
+    """
     # Load the CSV file you uploaded (adjust the path if necessary)
-    df = pd.read_csv("sleep_data_final.csv")  # Update the path
+    #df = pd.read_csv("sleep_data_final.csv")  # Update the path
     
     # Define age ranges for filtering
     age_ranges = {
