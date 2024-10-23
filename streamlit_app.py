@@ -3,13 +3,31 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+# Set wide page layout (optional but recommended for background images)
+st.set_page_config(layout="wide")
+
+# The URL of the background image from your GitHub repository
+background_image_url = "https://raw.githubusercontent.com/username/repo-name/main/images/background.png"
+
+# Inject CSS to set the background image
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url({background_image_url});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Load datasets
 sleep_data = pd.read_csv("sleep_data_final.csv")
 health_and_lifestyle_data = pd.read_csv("Sleep_health_and_lifestyle_dataset.csv")
 rail_workers_data = pd.read_csv("rail_workers_sleep_data.csv")
-
-# Set wide page layout
-st.set_page_config(layout="wide")
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
