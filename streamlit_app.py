@@ -474,7 +474,7 @@ elif page == "Work-Related Stress & Sleep":
                 colorscale=[[0, '#A2748C'], [1, '#130239']],
                 showscale=True,
                 zmin=0.2,  # correlation ranges from -1 to 1
-                zmax=1
+                zmax=0.6
             ))
         
             fig.update_layout(
