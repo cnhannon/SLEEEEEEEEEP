@@ -107,8 +107,8 @@ elif page == "Consumption Habits & Sleep Efficiency":
     # ADDED
     st.subheader("Sleep Efficiency Dataset")
     # Button with an ":information_source:" icon and expander for definitions
-    st.write(":information_source: **Key Sleep Definitions**")
-    with st.expander("Click to view definitions"):
+    #st.write(":information_source: **Key Sleep Definitions**")
+    with st.expander("**Key Terms**"):
         st.markdown("""
         - **Sleep Efficiency Duration**: The duration of time spent asleep while in bed, compared to total time spent in bed.
         - **REM Sleep Duration**: The stage of sleep spent in REM sleep, associated with dreaming and cognitive functions like memory and mood regulation.
