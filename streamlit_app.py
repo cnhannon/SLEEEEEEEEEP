@@ -7,7 +7,7 @@ import plotly.express as px
 st.set_page_config(layout="wide")
 
 # The URL of the background image from your GitHub repository
-background_image_url = "shutterstock_160257086.jpg"
+background_image_url = "https://github.com/cnhannon/sleeeeeeeeep/raw/main/papers.co-sg96-blue-lonly-sleep-gradation-blur-35-3840x2160-4k-wallpaper.jpg"
 
 # Inject CSS to set the background image
 st.markdown(
