@@ -16,11 +16,11 @@ st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Introduction", "Consumption Habits & Sleep Efficiency", "Lifestyle Factors & Stress", "Work-Related Stress & Sleep", "Conclusion"])
 
 
+# ------------------------------------------------------------------------------------------------
 
+# -----------------
 # INTRODUCTION PAGE
-
-
-
+# -----------------
 if page == "Introduction":
 
     # START (TO ADD BACKGROUND IMAGE) - COPY AND PASTE BETWEEN START AND END. WILL NEED TO CHANGE IMAGE URL.
@@ -64,10 +64,15 @@ if page == "Introduction":
     """)
 
 
+# --------------------------------------------------------------------------------------------
+
+# ---------------------------------------
 # CONSUMPTION HABITS AND SLEEP EFFICIENCY
-
-
+# ---------------------------------------
 elif page == "Consumption Habits & Sleep Efficiency":
+
+    # START
+    
     st.markdown(
         """
         <style>
@@ -92,10 +97,39 @@ elif page == "Consumption Habits & Sleep Efficiency":
         """,
         unsafe_allow_html=True
     )
+
+    # END
+    
     st.header("The Impact of Consumption Habits on Sleep Efficiency")
     col1, col2, col3 = st.columns(3)
 
-
+    # ------------------------------------------
+    # Added
+    st.subheader("Sleep Efficiency Dataset")
+    # Button with an ":information_source:" icon and expander for definitions
+    st.write(":information_source: **Key Sleep Definitions**")
+    with st.expander("Click to view definitions"):
+        st.markdown("""
+        **Sleep Efficiency Duration**: The duration of time spent asleep while in bed, compared to total time spent in bed.
+        **REM Sleep Duration**: The stage of sleep spent in REM sleep, associated with dreaming and cognitive functions like memory and mood regulation.
+        **Deep Sleep Duration**: The stage of sleep where the body focuses on physical recovery and growth, as well as immune function. It's the most restorative phase of sleep.
+        **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
+        """)
+    # Key Takeaways section
+    st.subheader("Key Takeaways")
+    st.markdown("""
+    - **Caffeine Consumption**:
+      - Negative impact on **Light Sleep**.
+      - **Stable Sleep Duration** with moderate caffeine intake.
+      - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
+    - **Alcohol Consumption**:
+      - Initial increase in **Light Sleep**.
+      - Decrease in **Light Sleep** with higher alcohol consumption.
+      - **Stable Sleep Duration** regardless of intake.
+    - **Caffeine’s Impact on REM Sleep**:
+      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
+    """)
+    # ------------------------------------------
     
     # Graph 1: Caffeine vs Sleep Efficiency - Scatter plot with distinct color
     with col1:
@@ -244,11 +278,12 @@ elif page == "Consumption Habits & Sleep Efficiency":
     st.write(f"Filtered Data: {len(filtered_df)} Participants")
     st.dataframe(filtered_df)
 
-# ----------PAGE-3------------
 
+# ----------------------------------------------------------------------------------
 
-
-# Page 3: Lifestyle Factors & Stress
+# ----------------------------
+# LIFESTYLE FACTORS AND STRESS
+# ----------------------------
 elif page == "Lifestyle Factors & Stress":
     st.markdown(
         """
@@ -389,15 +424,11 @@ elif page == "Lifestyle Factors & Stress 2":
     st.pyplot(fig)
 
 
+# -----------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-# Page 4: Work-Related Stress & Sleep
+# -----------------------------
+# WORK-RELATED STRESS AND SLEEP
+# -----------------------------
 elif page == "Work-Related Stress & Sleep":
     st.markdown(
         """
@@ -570,26 +601,11 @@ elif page == "Work-Related Stress & Sleep":
         st.plotly_chart(fig)
 
 
+# ----------------------------------------------------------------------------------------------------
 
-
-
-
-        
-
-
-
-
-
-
-
-
-    
-    
-        
-
-
-
-# Page 5: Conclusion
+# ----------
+# CONCLUSION
+# ----------
 elif page == "Conclusion":
     st.markdown(
         """
