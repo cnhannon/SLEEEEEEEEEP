@@ -116,30 +116,45 @@ elif page == "Consumption Habits & Sleep Efficiency":
         - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
         """)
         # -------ADDING--------
-    number_of_participants = 452  # Total number of participants
-    age_range = "9 - 69 years"
-    genders = {
-        "Male": 228,   # Example count of male participants
-        "Female": 224, # Example count of female participants
-        "Other": 0     # Example count of other genders
-    }
-    
-    # Title of the scorecard
-    st.header("Participant Demographics")
-    
-    # Displaying number of participants
-    st.metric(label="Number of Participants", value=number_of_participants)
-    
-    # Displaying age range
-    st.metric(label="Age Range", value=age_range)
-    
-    # Displaying gender distribution
-    st.subheader("Gender Distribution")
-    for gender, count in genders.items():
-        st.metric(label=gender, value=count)
-
-    # Additional note
-    st.subheader("Note: Gender counts are based on participant responses.")
+    # Create three columns but only use col1 and col3
+    col1, col2, col3 = st.columns([1, 0.2, 1])
+    # Participant demographics scorecard in column 1
+    with col1:
+        number_of_participants = 452  # Total number of participants
+        age_range = "9 - 69 years"
+        genders = {
+            "Male": 228,
+            "Female": 224,
+            "Other": 0
+        }
+        # Title of the scorecard
+        st.header("Participant Demographics")
+        # Displaying number of participants
+        st.metric(label="Number of Participants", value=number_of_participants)
+        # Displaying age range
+        st.metric(label="Age Range", value=age_range)
+        # Displaying gender distribution
+        st.subheader("Gender Distribution")
+        for gender, count in genders.items():
+            st.metric(label=gender, value=count)
+        # Additional note
+        st.subheader("Note: Gender counts are based on participant responses.")
+    # Average consumption metrics scorecard in column 3
+    with col3:
+        average_caffeine = 22.345133  # Average caffeine consumption in mg
+        average_alcohol = 1.201327     # Average alcohol consumption in ounces
+        # Title of the scorecard
+        st.header("Average Consumption Metrics")
+        # Displaying average caffeine consumption
+        st.metric(label="Average Caffeine Consumption", value=f"{average_caffeine:.2f} mg")
+        # Displaying average alcohol consumption
+        st.metric(label="Average Alcohol Consumption", value=f"{average_alcohol:.2f} oz")
+        # Key explaining the conversions
+        st.subheader("Key:")
+        st.write("1 oz of alcohol is approximately equal to 30 milliliters.")
+        st.write("5 grams of caffeine is approximately equal to 30 mg of caffeine.")
+        # Additional note
+        st.subheader("Note: These values represent the average consumption levels in the dataset.")
 
  #---------------------------------------------------
     
