@@ -176,9 +176,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     # Apply the filters to the dataset
     filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
     
-    # Display the filtered data summary
-    st.write(f"Filtered Data: {len(filtered_df)} Participants")
-    st.dataframe(filtered_df)
+
     
     # Plot: Sleep Duration by Alcohol and Caffeine Levels (Bar Chart)
     fig_sleep_duration = px.bar(
@@ -223,21 +221,17 @@ elif page == "Consumption Habits & Sleep Efficiency":
     
     # Plot heatmap with seaborn
     plt.figure(figsize=(10, 6))
-    
-    # Create the heatmap and store it in 'ax'
-    ax = sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
+    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
     plt.title('Sleep Efficiency by Age Group and Gender')
-    
-    # Set the background colour
-    ax.set_facecolor('#0D1117')  # You can replace '#f0f0f0' with your desired hex colour
     
     # Show the heatmap using Streamlit
     st.pyplot(plt)
 
-    
+    # Display the filtered data summary
+    st.write(f"Filtered Data: {len(filtered_df)} Participants")
+    st.dataframe(filtered_df)
 
-
-
+# ----------PAGE-3------------
 
 
 
