@@ -272,8 +272,8 @@ elif page == "Consumption Habits & Sleep Efficiency":
     st.pyplot(plt)
 
     # Display the filtered data summary
-    st.write(f"Filtered Data: {len(filtered_df)} Participants")
-    st.dataframe(filtered_df)
+    #st.write(f"Filtered Data: {len(filtered_df)} Participants")
+    #st.dataframe(filtered_df)
 
 
 # ----------------------------------------------------------------------------------
