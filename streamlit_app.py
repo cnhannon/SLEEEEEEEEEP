@@ -21,7 +21,7 @@ if page == "Introduction":
         """
         <style>
         .reportview-container {
-            background: url('https://example.com/page1-background.jpg');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Copy of Aurora Borealis Newsletter Presentation.png');
             background-size: cover;
         }
         .sidebar .sidebar-content {
