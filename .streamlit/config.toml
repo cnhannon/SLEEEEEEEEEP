@@ -1,6 +1,6 @@
 [theme]
-primaryColor = '7D4E57'
-backgroundColor = '264653'
-secondaryBackgroundColor = '212D40'
-textColor = 'D66853'
-font = 'sans-serif'
+primaryColor = "#4CAF50"           # Colour of buttons, sliders, and other interactive elements
+backgroundColor = "#F0F0F5"        # Background colour of the app
+secondaryBackgroundColor = "#FFFFFF"  # Background colour of cards, containers
+textColor = "#333333"              # Main text colour
+font = "sans serif"                # Font family, options: "sans serif", "serif", "monospace"
