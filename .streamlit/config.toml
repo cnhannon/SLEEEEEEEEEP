@@ -1,6 +1,6 @@
 [theme]
-primaryColor = '#202959'
-backgroundColor = '#202959'
-secondaryBackgroundColor = '#202959'
-textColor = '#F2CFBB'
-font = 'open-sans'
+primaryColor = '7D4E57'
+backgroundColor = '11151C'
+secondaryBackgroundColor = '212D40'
+textColor = 'D66853'
+font = 'sans-serif'
