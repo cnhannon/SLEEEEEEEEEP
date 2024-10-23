@@ -410,7 +410,7 @@ elif page == "Work-Related Stress & Sleep":
         """,
         unsafe_allow_html=True
     )
-    st.header("Page 4: Work-Related Stress Impact on Sleep")
+    st.header("Impact of Work-Related Stress on Sleep")
     col1, col2 = st.columns(2)
 
     # Graph 7: Job Security vs Sleep Loss - Scatter plot
