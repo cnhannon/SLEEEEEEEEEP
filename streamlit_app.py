@@ -344,25 +344,27 @@ elif page == "Lifestyle Factors & Stress":
     #st.write(":information_source: **Key Sleep Definitions**")
     with st.expander("**Key Terms**"):
         st.markdown("""
-        - **key term**: def.
-        - **key term**: def.
-        - **key term**: def.
-        - **key term**: def.
+        - **Fruits_Veggies**: How many fruits or vegetables do you eat every day?.
+        - **Daily_Stress**: How much stress do you typically experience every day.
+        - **Work_Life_Balance_Score**: Score calculated by AH.COM algorithm.
         """)
     # Key Insights section
     st.subheader("Key Insights")
     st.markdown("""
-    - **Caffeine’s Impact on REM Sleep**:
-      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
-    - **Caffeine Consumption**:
-      - Negative impact on **Light Sleep**.
-      - **Stable Sleep Duration** with moderate caffeine intake.
-      - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
-    - **Alcohol Consumption**:
-      - Initial increase in **Light Sleep**.
-      - Decrease in **Light Sleep** with higher alcohol consumption.
-      - **Stable Sleep Duration** regardless of intake.
+    - **Key Insights for Lifestyle and Wellbeing Analysis**:
+      - Differences in sleep patterns and stress levels across different groups.
+    - **Gender Differences in Sleep**:
+      - Highlighting variations in sleep habits and stress responses based on gender.
+    - **Sleep Categorization**:
+      - **Short Sleepers**: Less than 6 hours of sleep.
+      - **Adequate Sleepers**: 6 to 8 hours of sleep.
+      - **Long Sleepers**: More than 8 hours of sleep.
+    - **High Stress and Sleep Disruptions**:
+      - High stress leads to sleep disruptions or insufficient sleep.
+    - **High Stress and Sleep Quality**:
+      - Increased stress correlates with shorter sleep and poorer sleep quality.
     """)
+
 
     # Graph 4: Stress vs Sleep Quality - Scatter plot
     with col1:
