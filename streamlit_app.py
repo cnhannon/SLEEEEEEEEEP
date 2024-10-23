@@ -42,7 +42,6 @@ if page == "Introduction":
         unsafe_allow_html=True
     )
 
-    )
     st.title("Sleep, Lifestyle, and Job Factors: A Data Analysis Journey")
     st.header("Introduction: The Modern Sleep Problem")
     st.write("""
