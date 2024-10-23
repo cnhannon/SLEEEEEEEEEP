@@ -116,7 +116,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
         """)
     # Key Takeaways section
-    st.subheader("Key Insights")
+    st.subheader("Key Takeaways")
     st.markdown("""
     - **Caffeine Consumption**:
       - Negative impact on **Light Sleep**.
@@ -129,6 +129,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     - **Caffeine’s Impact on REM Sleep**:
       - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
     """)
+
     # ------------------------------------------
 
     # Deleted 3 graphs (scatter, candlestick, histogram)
@@ -455,27 +456,24 @@ elif page == "Work-Related Stress & Sleep":
     col1, col2 = st.columns(2)
 
     # KEY TERMS
+
+#------------
     with st.expander("**Key Terms**"):
         st.markdown("""
-        - **Sleep Efficiency Duration**: The duration of time spent asleep while in bed, compared to total time spent in bed.
-        - **REM Sleep Duration**: The stage of sleep spent in REM sleep, associated with dreaming and cognitive functions like memory and mood regulation.
-        - **Deep Sleep Duration**: The stage of sleep where the body focuses on physical recovery and growth, as well as immune function. It's the most restorative phase of sleep.
-        - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
+        - **Lack of Control**: Highlighting this as a primary contributor to stress impacting sleep loss.
+        - **Time Off**: Emphasising the role of adequate rest periods in reducing sleep-related stress.
+        - **Sleep Stress Correlation**: Summarising the relationship between work-related factors and sleep disturbances, especially focusing on stress levels.
         """)
-    # Key Takeaways section
-    st.subheader("Key Takeaways")
+    # Key Insights section
     st.markdown("""
-    - **Caffeine Consumption**:
-      - Negative impact on **Light Sleep**.
-      - **Stable Sleep Duration** with moderate caffeine intake.
-      - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
-    - **Alcohol Consumption**:
-      - Initial increase in **Light Sleep**.
-      - Decrease in **Light Sleep** with higher alcohol consumption.
-      - **Stable Sleep Duration** regardless of intake.
-    - **Caffeine’s Impact on REM Sleep**:
-      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
+    - **High Stress Levels**:
+      - Strong correlation with **Sleep Loss**, especially due to lack of control and time off.
+    - **Sleep Loss Impact**:
+      - Increased **Sleep Loss** leads to reduced **Alertness at Work**, creating a negative cycle between stress, poor sleep, and productivity.
+    - **Key Contributors to Sleep Stress**:
+      - Our regression analysis highlights **Lack of Control** and **Insufficient Time Off** as the largest contributors to sleep-related stress.
     """)
+#====================
     # Graph 7: Job Security vs Sleep Loss - Scatter plot
     with col1:
         
