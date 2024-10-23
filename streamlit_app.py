@@ -104,7 +104,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     col1, col2, col3 = st.columns(3)
 
     # ------------------------------------------
-    # Added
+    # ADDED
     st.subheader("Sleep Efficiency Dataset")
     # Button with an ":information_source:" icon and expander for definitions
     st.write(":information_source: **Key Sleep Definitions**")
@@ -257,6 +257,87 @@ elif page == "Consumption Habits & Sleep Efficiency":
     )
     
     st.plotly_chart(fig_sleep_proportions)
+
+    # ----------------------------ADDING-------------------------------------
+    # Scatter Plot: Sleep Proportions (REM, Deep, Light) by Alcohol Consumption
+    def create_scatter_plot_alcohol():
+        fig_sleep_proportions_alcohol = go.Figure()
+        # Add scatter points for REM Sleep Duration
+        fig_sleep_proportions_alcohol.add_trace(go.Scatter(
+            x=filtered_df['Alcohol_consumption'], y=filtered_df['Rem_Sleep_Duration'],
+            mode='markers', name='REM Sleep Duration (Alcohol)',
+            marker=dict(size=8, opacity=0.6, color='blue')
+        ))
+        # Add scatter points for Deep Sleep Duration
+        fig_sleep_proportions_alcohol.add_trace(go.Scatter(
+            x=filtered_df['Alcohol_consumption'], y=filtered_df['Deep_Sleep_Duration'],
+            mode='markers', name='Deep Sleep Duration (Alcohol)',
+            marker=dict(size=8, opacity=0.6, color='green')
+        ))
+        # Add scatter points for Light Sleep Duration
+        fig_sleep_proportions_alcohol.add_trace(go.Scatter(
+            x=filtered_df['Alcohol_consumption'], y=filtered_df['Light_Sleep_Duration'],
+            mode='markers', name='Light Sleep Duration (Alcohol)',
+            marker=dict(size=8, opacity=0.6, color='orange')
+        ))
+        # Update layout
+        fig_sleep_proportions_alcohol.update_layout(
+            title="Light, Deep, REM Sleep Durations by Alcohol Consumption",
+            xaxis_title="Alcohol Consumption (ounces)",
+            yaxis_title="Sleep Duration (hours)",
+            showlegend=True
+        )
+        # Show plot
+        fig_sleep_proportions_alcohol.show()
+    # Scatter Plot: Sleep Proportions (REM, Deep, Light) by Caffeine Consumption
+    def create_scatter_plot_caffeine():
+        fig_sleep_proportions_caffeine = go.Figure()
+        # Add scatter points for REM Sleep Duration
+        fig_sleep_proportions_caffeine.add_trace(go.Scatter(
+            x=filtered_df['Caffeine_consumption'], y=filtered_df['Rem_Sleep_Duration'],
+            mode='markers', name='REM Sleep Duration (Caffeine)',
+            marker=dict(size=8, opacity=0.6, color='purple')
+        ))
+        # Add scatter points for Deep Sleep Duration
+        fig_sleep_proportions_caffeine.add_trace(go.Scatter(
+            x=filtered_df['Caffeine_consumption'], y=filtered_df['Deep_Sleep_Duration'],
+            mode='markers', name='Deep Sleep Duration (Caffeine)',
+            marker=dict(size=8, opacity=0.6, color='teal')
+        ))
+        # Add scatter points for Light Sleep Duration
+        fig_sleep_proportions_caffeine.add_trace(go.Scatter(
+            x=filtered_df['Caffeine_consumption'], y=filtered_df['Light_Sleep_Duration'],
+            mode='markers', name='Light Sleep Duration (Caffeine)',
+            marker=dict(size=8, opacity=0.6, color='yellow')
+        ))
+        # Update layout
+        fig_sleep_proportions_caffeine.update_layout(
+            title="Light, Deep, REM Sleep Durations by Caffeine Consumption",
+            xaxis_title="Caffeine Consumption (mg)",
+            yaxis_title="Sleep Duration (hours)",
+            showlegend=True
+        )
+        # Show plot
+        fig_sleep_proportions_caffeine.show()
+    # Manually trigger update when filters are changed
+    def on_filter_change(change):
+        update_metrics(
+            age_dropdown.value,
+            gender_dropdown.value,
+            alcohol_slider.value,
+            caffeine_slider.value
+        )
+        create_scatter_plot_alcohol()  # Recreate scatter plot for alcohol consumption
+        create_scatter_plot_caffeine()  # Recreate scatter plot for caffeine consumption
+    # Add observers to trigger the update when any filter changes
+    age_dropdown.observe(on_filter_change, names='value')
+    gender_dropdown.observe(on_filter_change, names='value')
+    alcohol_slider.observe(on_filter_change, names='value')
+    caffeine_slider.observe(on_filter_change, names='value')
+    # To ensure proper rendering of graphs in Colab or Jupyter Notebooks
+    pio.renderers.default = "colab"
+
+    # -----------------------------------------------------------------------
     
     # Heatmap: Combined Effects of Age Group & Gender on Sleep Efficiency
     if "Age_Group" not in filtered_df.columns:
