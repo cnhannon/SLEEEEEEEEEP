@@ -27,28 +27,6 @@ if page == "Introduction":
     - Health and Lifestyle Data: Examines how lifestyle attributes such as physical activity and stress affect sleep.
     - Rail Workers' Sleep Data: Focuses on job-related stress and its impact on rail workers' sleep quality.
     """)
-    # -----------------LAYOUT------------------
-
-# Set up the page configuration (optional)
-    st.set_page_config(layout="wide")
-
-# Use the raw URL of the image from your GitHub repo
-    background_image_url = "https://github.com/cnhannon/sleeeeeeeeep/raw/main/shutterstock_160257086.jpg"
-
-# Inject custom CSS for the background image
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("{background_image_url}");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
 # Page 2: Consumption Habits & Sleep Efficiency
 elif page == "Consumption Habits & Sleep Efficiency":
