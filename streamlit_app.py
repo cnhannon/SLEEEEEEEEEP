@@ -6,6 +6,8 @@ import plotly.express as px
 # Set wide page layout (optional but recommended for background images)
 st.set_page_config(layout="wide")
 
+# ------------BACKGROUND IMAGE----------------
+'''
 # The URL of the background image from your GitHub repository
 background_image_url = "https://github.com/cnhannon/sleeeeeeeeep/raw/main/landscape-horizon-cloud-sky-sunrise-sunset-521133-pxhere.com.jpg"
 
@@ -23,6 +25,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+'''
 
 # Load datasets
 sleep_data = pd.read_csv("sleep_data_final.csv")
