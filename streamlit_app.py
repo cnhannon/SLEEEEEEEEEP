@@ -391,7 +391,7 @@ elif page == "Work-Related Stress & Sleep":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/09.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/10.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
