@@ -115,9 +115,11 @@ elif page == "Consumption Habits & Sleep Efficiency":
         - **Deep Sleep Duration**: The stage of sleep where the body focuses on physical recovery and growth, as well as immune function. It's the most restorative phase of sleep.
         - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
         """)
-    # Key Takeaways section
-    st.subheader("Key Takeaways")
+    # Key Insights section
+    st.subheader("Key Insights")
     st.markdown("""
+    - **Caffeine’s Impact on REM Sleep**:
+      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
     - **Caffeine Consumption**:
       - Negative impact on **Light Sleep**.
       - **Stable Sleep Duration** with moderate caffeine intake.
@@ -126,8 +128,6 @@ elif page == "Consumption Habits & Sleep Efficiency":
       - Initial increase in **Light Sleep**.
       - Decrease in **Light Sleep** with higher alcohol consumption.
       - **Stable Sleep Duration** regardless of intake.
-    - **Caffeine’s Impact on REM Sleep**:
-      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
     """)
 
     # ------------------------------------------
@@ -463,6 +463,7 @@ elif page == "Work-Related Stress & Sleep":
         - **Sleep Stress Correlation**: Summarising the relationship between work-related factors and sleep disturbances, especially focusing on stress levels.
         """)
     # Key Insights section
+    st.subheader("Key Insights")
     st.markdown("""
     - **High Stress Levels**:
       - Strong correlation with **Sleep Loss**, especially due to lack of control and time off.
