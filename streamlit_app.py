@@ -20,19 +20,28 @@ if page == "Introduction":
     st.markdown(
         """
         <style>
-        .reportview-container {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Copy of Aurora Borealis Newsletter Presentation.png');
+        /* Apply the background image to the entire app */
+        .stApp {
+            background: url('https://raw.githubusercontent.com/cnhannon/sleeeeeeeeep/main/images/Copy%20of%20Aurora%20Borealis%20Newsletter%20Presentation.png');
             background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-        .sidebar .sidebar-content {
-            background: rgba(255, 255, 255, 0.1);
+    
+        /* Optional: Customize the sidebar to have a slight transparency */
+        .css-1d391kg {
+            background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
         }
-        .main {
-            background-color: #FFFFFF;
+    
+        /* Optional: Customize the main content area background (if needed) */
+        .css-18e3th9 {
+            background-color: transparent;
         }
         </style>
         """,
         unsafe_allow_html=True
+    )
+
     )
     st.title("Sleep, Lifestyle, and Job Factors: A Data Analysis Journey")
     st.header("Introduction: The Modern Sleep Problem")
