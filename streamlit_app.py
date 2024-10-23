@@ -549,7 +549,7 @@ elif page == "Work-Related Stress & Sleep":
                      x='Coefficient',
                      y='Variable',
                      orientation='h', 
-                     color_discrete_sequence=['#A58471']
+                     color_discrete_sequence=['#A58471'],
                      title='Top 5 Predictors of Sleep Loss')
         
         # Show the updated plot in Streamlit
