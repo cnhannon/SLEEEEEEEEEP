@@ -116,30 +116,30 @@ elif page == "Consumption Habits & Sleep Efficiency":
         - **Light Sleep Duration**: The stage of sleep that makes up the majority of the sleep cycle. It's not as restorative as deep sleep but essential for transitioning between sleep stages.
         """)
         # -------ADDING--------
-        number_of_participants = 452  # Total number of participants
-        age_range = "9 - 69 years"
-        genders = {
-            "Male": 228,   # Example count of male participants
-            "Female": 224, # Example count of female participants
-            "Other": 0     # Example count of other genders
-        }
-        
-        # Title of the scorecard
-        st.header("Participant Demographics")
-        
-        # Displaying number of participants
-        st.metric(label="Number of Participants", value=number_of_participants)
-        
-        # Displaying age range
-        st.metric(label="Age Range", value=age_range)
-        
-        # Displaying gender distribution
-        st.subheader("Gender Distribution")
-        for gender, count in genders.items():
-            st.metric(label=gender, value=count)
+    number_of_participants = 452  # Total number of participants
+    age_range = "9 - 69 years"
+    genders = {
+        "Male": 228,   # Example count of male participants
+        "Female": 224, # Example count of female participants
+        "Other": 0     # Example count of other genders
+    }
+    
+    # Title of the scorecard
+    st.header("Participant Demographics")
+    
+    # Displaying number of participants
+    st.metric(label="Number of Participants", value=number_of_participants)
+    
+    # Displaying age range
+    st.metric(label="Age Range", value=age_range)
+    
+    # Displaying gender distribution
+    st.subheader("Gender Distribution")
+    for gender, count in genders.items():
+        st.metric(label=gender, value=count)
 
-        # Additional note
-        st.subheader("Note: Gender counts are based on participant responses.")
+    # Additional note
+    st.subheader("Note: Gender counts are based on participant responses.")
 
  #---------------------------------------------------
     
