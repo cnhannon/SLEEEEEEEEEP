@@ -79,7 +79,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         """,
         unsafe_allow_html=True
     )
-    st.header("Page 2: The Impact of Consumption Habits on Sleep Efficiency")
+    st.header("The Impact of Consumption Habits on Sleep Efficiency")
     col1, col2, col3 = st.columns(3)
 
 
