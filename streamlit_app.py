@@ -215,31 +215,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     )
     st.plotly_chart(fig_sleep_duration)
     
-    # Line Chart: Sleep Proportions (REM, Deep, Light) by Alcohol & Caffeine Intake
-    fig_sleep_proportions = go.Figure()
-    
-    fig_sleep_proportions.add_trace(go.Scatter(
-        x=filtered_df['Alcohol_consumption'], y=filtered_df['Rem_Sleep_Duration'],
-        mode='lines+markers', name='REM Sleep Duration'
-    ))
-    
-    fig_sleep_proportions.add_trace(go.Scatter(
-        x=filtered_df['Alcohol_consumption'], y=filtered_df['Deep_Sleep_Duration'],
-        mode='lines+markers', name='Deep Sleep Duration'
-    ))
-    
-    fig_sleep_proportions.add_trace(go.Scatter(
-        x=filtered_df['Alcohol_consumption'], y=filtered_df['Light_Sleep_Duration'],
-        mode='lines+markers', name='Light Sleep Duration'
-    ))
-    
-    fig_sleep_proportions.update_layout(
-        title="REM, Deep, Light Sleep Durations by Alcohol Intake",
-        xaxis_title="Alcohol Consumption",
-        yaxis_title="Sleep Duration (hours)"
-    )
-    
-    st.plotly_chart(fig_sleep_proportions)
+    # !! Deleted a line chart !!
 
     # ----------------------------ADDING-------------------------------------
     # Scatter Plot: Sleep Proportions (REM, Deep, Light) by Alcohol Consumption
