@@ -386,6 +386,30 @@ elif page == "Lifestyle Factors & Stress 2":
 
 # Page 4: Work-Related Stress & Sleep
 elif page == "Work-Related Stress & Sleep":
+    st.markdown(
+        """
+        <style>
+        /* Apply the background image to the entire app */
+        .stApp {
+            background: url('https://raw.githubusercontent.com/cnhannon/sleeeeeeeeep/main/images/Copy%20of%20Aurora%20Borealis%20Newsletter%20Presentation.png(3)');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        /* Optional: Customize the sidebar to have a slight transparency */
+        .css-1d391kg {
+            background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
+        }
+    
+        /* Optional: Customize the main content area background (if needed) */
+        .css-18e3th9 {
+            background-color: transparent;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.header("Page 4: Work-Related Stress Impact on Sleep")
     col1, col2 = st.columns(2)
 
@@ -549,6 +573,30 @@ elif page == "Work-Related Stress & Sleep":
 
 # Page 5: Conclusion
 elif page == "Conclusion":
+    st.markdown(
+        """
+        <style>
+        /* Apply the background image to the entire app */
+        .stApp {
+            background: url('https://raw.githubusercontent.com/cnhannon/sleeeeeeeeep/main/images/Copy%20of%20Aurora%20Borealis%20Newsletter%20Presentation.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        /* Optional: Customize the sidebar to have a slight transparency */
+        .css-1d391kg {
+            background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
+        }
+    
+        /* Optional: Customize the main content area background (if needed) */
+        .css-18e3th9 {
+            background-color: transparent;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.header("Page 5: Conclusion")
     st.write("""
     Through this analysis, we have uncovered key insights about the various factors influencing sleep quality:
