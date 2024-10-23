@@ -339,7 +339,7 @@ elif page == "Lifestyle Factors & Stress":
     st.header("Lifestyle Factors and Stress")
     col1, col2, col3 = st.columns(3)
 
-        st.subheader("Sleep Efficiency Dataset")
+    st.subheader("Sleep Efficiency Dataset")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
     with st.expander("**Key Terms**"):
