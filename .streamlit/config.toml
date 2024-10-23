@@ -2,5 +2,5 @@
 primaryColor = "#7D4E57"           # Colour of buttons, sliders, and other interactive elements
 backgroundColor = "transparent"        # Background colour of the app
 secondaryBackgroundColor = "#011E22"  # Background colour of cards, containers
-textColor = "#01CAAB"              # Main text colour
+textColor = "#FFFFFF"              # Main text colour
 font = "sans serif"                # Font family, options: "sans serif", "serif", "monospace"
