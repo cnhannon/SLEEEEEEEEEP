@@ -264,7 +264,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     for sleep_type, color in zip(['Rem_Sleep_Duration', 'Deep_Sleep_Duration', 'Light_Sleep_Duration'],
                                   ['blue', 'green', 'orange']):
         fig_sleep_proportions_alcohol.add_trace(go.Scatter(
-            x=filtered_df['Alcohol_consumption'], y=filtered_data[sleep_type],
+            x=filtered_df['Alcohol_consumption'], y=filtered_df[sleep_type],
             mode='markers', name=sleep_type.replace('_', ' ').capitalize(),
             marker=dict(size=8, opacity=0.6, color=color)
         ))
