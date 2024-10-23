@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-import streamlit as st
+# -----------------LAYOUT------------------
 
 # Set up the page configuration (optional)
 st.set_page_config(layout="wide")
@@ -25,11 +25,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Streamlit app content
-st.title("Streamlit App with Background Image")
-st.write("This app uses a background image from a GitHub repository.")
-
 
 
 # Load datasets
