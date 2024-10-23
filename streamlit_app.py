@@ -157,22 +157,50 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
 
  #---------------------------------------------------
-    
+    col1, col2=st.columns(2)
     # Key Insights section
-    st.subheader("Key Insights")
-    st.markdown("""
-    - **Caffeine’s Impact on REM Sleep**:
-      - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
-    - **Caffeine Consumption**:
-      - Negative impact on **Light Sleep**.
-      - **Stable Sleep Duration** with moderate caffeine intake.
-      - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
-    - **Alcohol Consumption**:
-      - Initial increase in **Light Sleep**.
-      - Decrease in **Light Sleep** with higher alcohol consumption.
-      - **Stable Sleep Duration** regardless of intake.
-    """)
+    with col1:
+        st.subheader("Key Insights")
+        st.markdown("""
+        - **Caffeine’s Impact on REM Sleep**:
+          - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
+        - **Caffeine Consumption**:
+          - Negative impact on **Light Sleep**.
+          - **Stable Sleep Duration** with moderate caffeine intake.
+          - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
+        - **Alcohol Consumption**:
+          - Initial increase in **Light Sleep**.
+          - Decrease in **Light Sleep** with higher alcohol consumption.
+          - **Stable Sleep Duration** regardless of intake.
+        """)
 
+# ---------------Heatmap moved-------------
+    with col2:
+        # Create 'Age_Group' if it doesn't exist
+        if "Age_Group" not in filtered_df.columns:
+            filtered_df["Age_Group"] = pd.cut(filtered_df["Age"], bins=[0, 19, 29, 39, 49, 59, 69],
+                                               labels=["Teenagers", "20s", "30s", "40s", "50s", "60s"])
+        
+        # Create the pivot table for Sleep Efficiency
+        heatmap_data = filtered_df.pivot_table(
+            values='Sleep_efficiency_hours', index='Age_Group', columns='Gender', aggfunc='mean' #please add _hours to sleep efficiency so that it can be shown in hours not decimal
+        )
+        
+        # Set up the heatmap
+        plt.figure(figsize=(10, 6), facecolor="#FAD8D3")  # Light pink background for the figure
+        ax = sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
+        
+        # Set background color for the axes
+        ax.set_facecolor("#FAD8D3")  # Light pink background for the axes
+        
+        # Title and labels
+        plt.title('Sleep Efficiency by Age Group and Gender', fontsize=16)
+        plt.xlabel('Gender', fontsize=12)
+        plt.ylabel('Age Group', fontsize=12)
+        
+        # Show the heatmap using Streamlit
+        st.pyplot(plt)
+    
     # ------------------------------------------
 
     # Deleted 3 graphs (scatter, candlestick, histogram)
@@ -304,30 +332,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     # -----------------------------------------------------------------------
     
     
-    # Create 'Age_Group' if it doesn't exist
-    if "Age_Group" not in filtered_df.columns:
-        filtered_df["Age_Group"] = pd.cut(filtered_df["Age"], bins=[0, 19, 29, 39, 49, 59, 69],
-                                           labels=["Teenagers", "20s", "30s", "40s", "50s", "60s"])
-    
-    # Create the pivot table for Sleep Efficiency
-    heatmap_data = filtered_df.pivot_table(
-        values='Sleep_efficiency_hours', index='Age_Group', columns='Gender', aggfunc='mean' #please add _hours to sleep efficiency so that it can be shown in hours not decimal
-    )
-    
-    # Set up the heatmap
-    plt.figure(figsize=(10, 6), facecolor="#FAD8D3")  # Light pink background for the figure
-    ax = sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
-    
-    # Set background color for the axes
-    ax.set_facecolor("#FAD8D3")  # Light pink background for the axes
-    
-    # Title and labels
-    plt.title('Sleep Efficiency by Age Group and Gender', fontsize=16)
-    plt.xlabel('Gender', fontsize=12)
-    plt.ylabel('Age Group', fontsize=12)
-    
-    # Show the heatmap using Streamlit
-    st.pyplot(plt)
+# HEATMAP WAZ ERE
 
 
     # Display the filtered data summary
