@@ -173,8 +173,31 @@ elif page == "Consumption Habits & Sleep Efficiency":
           - Decrease in **Light Sleep** with higher alcohol consumption.
           - **Stable Sleep Duration** regardless of intake.
         """)
-
-
+ # -----------------------------
+    # Function to filter data based on the selections
+    def filter_data(df, age_group, gender, alcohol_range, caffeine_range):
+        filtered_df = df.copy()
+    
+        # Filter by age group
+        if age_group != "All":
+            age_min, age_max = age_ranges[age_group]
+            filtered_df = filtered_df[(filtered_df["Age"] >= age_min) & (filtered_df["Age"] <= age_max)]
+    
+        # Filter by gender
+        if gender != "All":
+            filtered_df = filtered_df[filtered_df["Gender"] == gender]
+    
+        # Filter by alcohol consumption
+        filtered_df = filtered_df[
+            (filtered_df["Alcohol_consumption"] >= alcohol_range[0]) &
+            (filtered_df["Alcohol_consumption"] <= alcohol_range[1])
+        ]
+    
+        # Filter by caffeine consumption
+        filtered_df = filtered_df[
+            (filtered_df["Caffeine_consumption"] >= caffeine_range[0]) &
+            (filtered_df["Caffeine_consumption"] <= caffeine_range[1])
+        ]
         # Apply the filters to the dataset
     filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
 # ---------------Heatmap moved-------------
@@ -250,7 +273,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     caffeine_range = st.sidebar.slider(
         'Caffeine Consumption:', min_value=0, max_value=int(df['Caffeine_consumption'].max()), value=(0, 200)
     )
-    
+    """
     # Function to filter data based on the selections
     def filter_data(df, age_group, gender, alcohol_range, caffeine_range):
         filtered_df = df.copy()
@@ -275,7 +298,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
             (filtered_df["Caffeine_consumption"] >= caffeine_range[0]) &
             (filtered_df["Caffeine_consumption"] <= caffeine_range[1])
         ]
-    
+    """
         return filtered_df
     
     # Apply the filters to the dataset
