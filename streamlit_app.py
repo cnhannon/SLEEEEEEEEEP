@@ -262,7 +262,7 @@ elif page == "Lifestyle Factors & Stress":
         unsafe_allow_html=True
     )
     
-    st.header("Page 3: Lifestyle Factors and Stress")
+    st.header("Lifestyle Factors and Stress")
     col1, col2, col3 = st.columns(3)
 
     # Graph 4: Stress vs Sleep Quality - Scatter plot
