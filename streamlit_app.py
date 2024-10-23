@@ -327,8 +327,8 @@ elif page == "Consumption Habits & Sleep Efficiency":
             alcohol_slider.value,
             caffeine_slider.value
         )
-        create_scatter_plot_alcohol()  # Recreate scatter plot for alcohol consumption
-        create_scatter_plot_caffeine()  # Recreate scatter plot for caffeine consumption
+    create_scatter_plot_alcohol()  # Recreate scatter plot for alcohol consumption
+    create_scatter_plot_caffeine()  # Recreate scatter plot for caffeine consumption
     # Add observers to trigger the update when any filter changes
     age_dropdown.observe(on_filter_change, names='value')
     gender_dropdown.observe(on_filter_change, names='value')
