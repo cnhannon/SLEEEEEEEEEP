@@ -48,7 +48,7 @@ if page == "Home":
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.header("Contributors :family:")
+        st.header("Contributors :busts_in_silhouette:")
         st.markdown(
             """
             - **Sumeet Joshi**
