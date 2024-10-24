@@ -1096,7 +1096,7 @@ elif page == "Conclusion":
     )
 
     
-    st.title("Conclusion :bed:")
+    #st.title("Conclusion :bed:")
 
 
     st.write("""
