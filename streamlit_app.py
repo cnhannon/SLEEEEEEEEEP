@@ -1041,7 +1041,7 @@ elif page == "Conclusion":
         """,
         unsafe_allow_html=True
     )
-    st.title("Conclusion")
+    st.title("Conclusion :bed:")
 
 
     st.write("""
