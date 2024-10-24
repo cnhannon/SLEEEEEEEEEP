@@ -63,10 +63,10 @@ if page == "Home":
         st.header("Datasets")
         st.markdown(
             """
-            [Sleep Efficiency Dataset](https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring)
-            [Sleep, Health, and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
-            [Lifestyle and Wellbeing Dataset](https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data)
-            [Work Schedules and Sleep Patterns of Railroad Employees Dataset](https://catalog.data.gov/dataset/work-schedules-and-sleep-patterns-of-railroad-employees-dispatcher-background-survey)
+            - [Sleep Efficiency Dataset](https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring)
+            - [Sleep, Health, and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
+            - [Lifestyle and Wellbeing Dataset](https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data)
+            - [Work Schedules and Sleep Patterns of Railroad Employees Dataset](https://catalog.data.gov/dataset/work-schedules-and-sleep-patterns-of-railroad-employees-dispatcher-background-survey)
             """,
             unsafe_allow_html=True
         )
