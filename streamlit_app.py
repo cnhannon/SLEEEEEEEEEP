@@ -900,7 +900,7 @@ elif page == "Conclusion":
         By addressing these factors, individuals and organizations can take steps toward improving sleep health and overall well-being.
         """)
     # Display an image in your Streamlit app
-    st.image("images/cont_p1.png", caption="sleeeeeeeeep", use_column_width=True)
+    st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", caption="sleeeeeeeeep", use_column_width=True)
 
 
 
