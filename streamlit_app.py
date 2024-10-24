@@ -568,7 +568,6 @@ elif page == "Lifestyle and Wellbeing Analysis":
     st.subheader("[Dataset: Lifestyle and Wellbeing](https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data)")
     with st.expander("**Key Terms**"):
         st.markdown("""
-        - **Fruits_Veggies**: How many fruits or vegetables are eaten per day.
         - **Daily_Stress**: How much stress do you typically experience every day.
         - **Work_Life_Balance_Score**: Score calculated by AH.COM algorithm.
         """)
