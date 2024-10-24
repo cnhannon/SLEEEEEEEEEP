@@ -381,28 +381,6 @@ elif page == "Lifestyle Factors & Stress":
     st.subheader("Sleep Efficiency Dataset")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
-    with st.expander("**Key Terms**"):
-        st.markdown("""
-        - **Fruits_Veggies**: How many fruits or vegetables do you eat every day?.
-        - **Daily_Stress**: How much stress do you typically experience every day.
-        - **Work_Life_Balance_Score**: Score calculated by AH.COM algorithm.
-        """)
-    # Key Insights section
-    st.subheader("Key Insights")
-    st.markdown("""
-    - **Key Insights for Lifestyle and Wellbeing Analysis**:
-      - Differences in sleep patterns and stress levels across different groups.
-    - **Gender Differences in Sleep**:
-      - Highlighting variations in sleep habits and stress responses based on gender.
-    - **Sleep Categorization**:
-      - **Short Sleepers**: Less than 6 hours of sleep.
-      - **Adequate Sleepers**: 6 to 8 hours of sleep.
-      - **Long Sleepers**: More than 8 hours of sleep.
-    - **High Stress and Sleep Disruptions**:
-      - High stress leads to sleep disruptions or insufficient sleep.
-    - **High Stress and Sleep Quality**:
-      - Increased stress correlates with shorter sleep and poorer sleep quality.
-    """)
 
     col1, col2, col3 = st.columns(3)
 
@@ -547,6 +525,29 @@ elif page == "Lifestyle and Wellbeing Analysis":
         unsafe_allow_html=True
     )
     st.header("Lifestyle and Wellbeing Analysis")
+    with st.expander("**Key Terms**"):
+        st.markdown("""
+        - **Fruits_Veggies**: How many fruits or vegetables are eaten per day.
+        - **Daily_Stress**: How much stress do you typically experience every day.
+        - **Work_Life_Balance_Score**: Score calculated by AH.COM algorithm.
+        """)
+    # Key Insights section
+    st.subheader("Key Insights")
+    st.markdown("""
+    - **Key Insights for Lifestyle and Wellbeing Analysis**:
+      - Differences in sleep patterns and stress levels across different groups.
+    - **Gender Differences in Sleep**:
+      - Highlighting variations in sleep habits and stress responses based on gender.
+    - **Sleep Categorization**:
+      - **Short Sleepers**: Less than 6 hours of sleep.
+      - **Adequate Sleepers**: 6 to 8 hours of sleep.
+      - **Long Sleepers**: More than 8 hours of sleep.
+    - **High Stress and Sleep Disruptions**:
+      - High stress leads to sleep disruptions or insufficient sleep.
+    - **High Stress and Sleep Quality**:
+      - Increased stress correlates with shorter sleep and poorer sleep quality.
+    """)
+    
     col1, col2, col3 = st.columns(3)
 
     with col1:
