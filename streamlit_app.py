@@ -97,7 +97,7 @@ if page == "Home":
 
     with col4:
         # Display an image in your Streamlit app
-        st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", caption="sleeeeeeeeep", use_column_width=True)
+        st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", use_column_width=True)
     
 
 # -----------------
