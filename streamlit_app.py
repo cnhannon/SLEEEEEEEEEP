@@ -161,7 +161,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     #col1, col2=st.columns(2)
     # Key Insights section
     with col3:
-        st.subheader("Key Insights")
+        st.header("Key Insights")
         st.markdown("""
         - **Caffeine’s Impact on REM Sleep**:
           - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
