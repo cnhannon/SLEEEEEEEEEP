@@ -45,6 +45,33 @@ if page == "Home":
         unsafe_allow_html=True
     )
     st.title("SLEEEEEEEEEP")
+    st.header("Contributors")
+    col1, col2 = st.columns(2)
+    with co1:
+        st.markdown(
+            """
+            - **Sumeet Joshi**
+            - **Julian Lwanga**
+            """,
+            unsafe_allow_html=True
+        )
+
+    with co2:
+        st.markdown(
+            """
+        - **Leah Ramsamy**
+        - **Chris Hannon**
+            """,
+            unsafe_allow_html=True
+        )
+    
+    #col1, col2, col3 = st.columns(3)
+
+
+
+    
+    #with col1:
+        
 
 # -----------------
 # INTRODUCTION PAGE
