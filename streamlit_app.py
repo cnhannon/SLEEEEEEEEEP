@@ -53,7 +53,7 @@ if page == "Home":
 
     #st.title("SLEEEEEEEEEP :zzz:")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.header("Contributors :busts_in_silhouette:")
         st.markdown(
@@ -94,8 +94,10 @@ if page == "Home":
             """,
             unsafe_allow_html=True
         )
-    # Display an image in your Streamlit app
-    st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", caption="sleeeeeeeeep", use_column_width=True)
+
+    with col4:
+        # Display an image in your Streamlit app
+        st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", caption="sleeeeeeeeep", use_column_width=True)
     
 
 # -----------------
