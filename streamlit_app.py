@@ -171,7 +171,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # END
 
-    st.header("The Impact of Consumption Habits on Sleep Efficiency")
+    st.title("The Impact of Consumption Habits on Sleep Efficiency")
     col1, col2, col3 = st.columns(3)
 
     # ------------------------------------------
@@ -454,7 +454,7 @@ elif page == "Lifestyle Factors & Stress":
         unsafe_allow_html=True
     )
 
-    st.header("Lifestyle Factors and Stress")
+    st.title("Lifestyle Factors and Stress")
 
     st.subheader("Dataset: Sleep, Health, and Lifestyle")
     # Button with an ":information_source:" icon and expander for definitions
@@ -635,7 +635,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         """,
         unsafe_allow_html=True
     )
-    st.header("Lifestyle and Wellbeing Analysis")
+    st.title("Lifestyle and Wellbeing Analysis")
     st.subheader("Dataset: Lifestyle and Wellbeing")
     with st.expander("**Key Terms**"):
         st.markdown("""
@@ -842,7 +842,7 @@ elif page == "Work-Related Stress & Sleep":
         """,
         unsafe_allow_html=True
     )
-    st.header("Impact of Work-Related Stress on Sleep")
+    st.title("Impact of Work-Related Stress on Sleep")
     st.subheader("Dataset: Work Schedules and Sleep Patterns of Railroad Employees")
 
     # KEY TERMS
@@ -1039,7 +1039,7 @@ elif page == "Conclusion":
         """,
         unsafe_allow_html=True
     )
-    st.header("Conclusion")
+    st.title("Conclusion")
 
 
     st.write("""
