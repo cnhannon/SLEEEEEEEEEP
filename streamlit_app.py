@@ -265,7 +265,12 @@ elif page == "Consumption Habits & Sleep Efficiency":
         # Plot: Sleep Duration by Alcohol and Caffeine Levels (Bar Chart)
         fig_sleep_duration = px.bar(
             filtered_df, x="Alcohol_consumption", y="Sleep_Duration", color="Caffeine_consumption",
-            title="Sleep Duration by Alcohol & Caffeine Levels"
+            title="Sleep Duration by Alcohol & Caffeine Levels",
+             labels={
+                "Alcohol_consumption": "Alcohol Consumption",   # Removing underscore in x-axis label
+                "Sleep_Duration": "Sleep Duration",             # Removing underscore in y-axis label
+                "Caffeine_consumption": "Caffeine Consumption"  # Removing underscore in legend label
+            }
         )
         st.plotly_chart(fig_sleep_duration)
     
