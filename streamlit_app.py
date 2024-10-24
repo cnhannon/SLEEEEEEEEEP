@@ -44,7 +44,7 @@ if page == "Home":
         """,
         unsafe_allow_html=True
     )
-    st.title(":zzz: SLEEEEEEEEEP :zzz:")
+    st.title("SLEEEEEEEEEP :zzz:")
 
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -173,7 +173,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # END
 
-    st.title(":wine_glass: :coffee: The Impact of Consumption Habits on Sleep Efficiency")
+    st.title("The Impact of Consumption Habits on Sleep Efficiency :wine_glass: :coffee:")
     col1, col2, col3 = st.columns(3)
 
     # ------------------------------------------
