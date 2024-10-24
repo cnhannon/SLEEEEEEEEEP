@@ -639,8 +639,8 @@ elif page == "Lifestyle and Wellbeing Analysis":
     st.header("Dataset: Lifestyle and Wellbeing")
     with st.expander("**Key Terms**"):
         st.markdown("""
-        - **Daily_Stress**: How much stress do you typically experience every day.
-        - **Work_Life_Balance_Score**: Score calculated by AH.COM algorithm.
+        - **Daily Stress**: How much stress do you typically experience every day.
+        - **Work Life Balance Score**: Score calculated by AH.COM algorithm.
         """)
     # Key Insights section
     st.subheader("Key Insights")
