@@ -653,7 +653,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         # Average Sleep Hours by Age and Gender
         st.subheader("Average Sleep Hours by Age and Gender")
         avg_sleep_by_age_gender = df_clean.groupby(['AGE', 'GENDER'])['SLEEP_HOURS'].mean().unstack()
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots()
         avg_sleep_by_age_gender.plot(kind='bar', ax=ax)
         ax.set_title('Average Sleep Hours by Age and Gender', fontsize=14)
         ax.set_ylabel('Average Sleep Hours')
