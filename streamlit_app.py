@@ -176,7 +176,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # ------------------------------------------
     # ADDED
-    st.subheader("Dataset: Sleep Efficiency")
+    st.header("Dataset: Sleep Efficiency")
     #st.markdown("[Click here to visit Streamlit's website](https://streamlit.io)")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
@@ -200,7 +200,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
             "Other": 0
         }
         # Title of the scorecard
-        st.header("Participant Demographics")
+        st.subheader("Participant Demographics")
         # Displaying number of participants
         st.metric(label="Number of Participants", value=number_of_participants)
         # Displaying age range
@@ -216,7 +216,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         average_caffeine = 22.345133  # Average caffeine consumption in mg
         average_alcohol = 1.201327     # Average alcohol consumption in ounces
         # Title of the scorecard
-        st.header("Average Consumption Metrics")
+        st.subheader("Average Consumption Metrics")
         # Displaying average caffeine consumption
         st.metric(label="Average Caffeine Consumption", value=f"{average_caffeine:.2f} mg")
         # Displaying average alcohol consumption
@@ -232,7 +232,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     #col1, col2=st.columns(2)
     # Key Insights section
     with col3:
-        st.header("Key Insights")
+        st.subheader("Key Insights")
         st.markdown("""
         - **Caffeine’s Impact on REM Sleep**:
           - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
@@ -456,13 +456,13 @@ elif page == "Lifestyle Factors & Stress":
 
     st.title("Lifestyle Factors and Stress")
 
-    st.subheader("Dataset: Sleep, Health, and Lifestyle")
+    st.header("Dataset: Sleep, Health, and Lifestyle")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
 
     #Key Insights
     # --------------------------------------------------------------------------------------------------
-    st.header("Key Insights")
+    st.subheader("Key Insights")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
@@ -636,7 +636,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         unsafe_allow_html=True
     )
     st.title("Lifestyle and Wellbeing Analysis")
-    st.subheader("Dataset: Lifestyle and Wellbeing")
+    st.header("Dataset: Lifestyle and Wellbeing")
     with st.expander("**Key Terms**"):
         st.markdown("""
         - **Daily_Stress**: How much stress do you typically experience every day.
@@ -843,7 +843,7 @@ elif page == "Work-Related Stress & Sleep":
         unsafe_allow_html=True
     )
     st.title("Impact of Work-Related Stress on Sleep")
-    st.subheader("Dataset: Work Schedules and Sleep Patterns of Railroad Employees")
+    st.header("Dataset: Work Schedules and Sleep Patterns of Railroad Employees")
 
     # KEY TERMS
 #------------
