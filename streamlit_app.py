@@ -1061,8 +1061,8 @@ elif page == "Conclusion":
     with col3:
         st.write("""
         - **Job-Related Stress in Rail Workers:**
-        - Job insecurity and surges in workload directly contribute to reduced sleep quality.
-        - Addressing job-related stress is crucial for enhancing sleep health.
+            - Job insecurity and surges in workload directly contribute to reduced sleep quality.
+            - Addressing job-related stress is crucial for enhancing sleep health.
         """)
     st.write(
         """
