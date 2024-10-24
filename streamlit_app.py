@@ -77,25 +77,17 @@ if page == "Home":
     
     with col2:
         st.header("Datasets")
+        
         st.markdown(
             """
-            <style>
-            a {
-                color: #000002;  /* Replace with your desired hex color */
-            }
-            </style>
-            """, 
-            unsafe_allow_html=True
-        )
-        st.markdown(
-            """
-            - [Sleep Efficiency Dataset](https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring)
-            - [Sleep, Health, and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
-            - [Lifestyle and Wellbeing Dataset](https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data)
-            - [Work Schedules and Sleep Patterns of Railroad Employees Dataset](https://catalog.data.gov/dataset/work-schedules-and-sleep-patterns-of-railroad-employees-dispatcher-background-survey)
+            - <a href="https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring" style="color:#000002;">Sleep Efficiency Dataset</a>
+            - <a href="https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset" style="color:#000002;">Sleep, Health, and Lifestyle Dataset</a>
+            - <a href="https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data" style="color:#000002;">Lifestyle and Wellbeing Dataset</a>
+            - <a href="https://catalog.data.gov/dataset/work-schedules-and-sleep-patterns-of-railroad-employees-dispatcher-background-survey" style="color:#000002;">Work Schedules and Sleep Patterns of Railroad Employees Dataset</a>
             """,
             unsafe_allow_html=True
         )
+    
 
 # -----------------
 # INTRODUCTION PAGE
