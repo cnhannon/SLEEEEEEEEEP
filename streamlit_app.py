@@ -91,7 +91,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     
         /* Optional: Customize the main content area background (if needed) */
         .css-18e3th9 {
-            background-color: '#1D0064';
+            background-color: transparent;
         }
         </style>
         """,
