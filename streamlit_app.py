@@ -188,7 +188,15 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # END
 
-    st.title("The Impact of Consumption Habits on Sleep Efficiency :wine_glass: :coffee:")
+    st.markdown(
+        """
+        <h1 style='color:#d39c5d;'>The Impact of Consumption Habits on Sleep Efficiency 🍷 ☕</h1>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    
+    #st.title("The Impact of Consumption Habits on Sleep Efficiency :wine_glass: :coffee:")
     col1, col2, col3 = st.columns(3)
 
     # ------------------------------------------
@@ -471,7 +479,14 @@ elif page == "Lifestyle Factors & Stress":
         unsafe_allow_html=True
     )
 
-    st.title("Lifestyle Factors and Stress :runner:")
+    st.markdown(
+        """
+        <h1 style='color:#d39c5d;'>Lifestyle Factors and Stress 🏃</h1>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    #st.title("Lifestyle Factors and Stress :runner:")
 
     st.header("Dataset: Sleep, Health, and Lifestyle")
     # Button with an ":information_source:" icon and expander for definitions
@@ -652,7 +667,15 @@ elif page == "Lifestyle and Wellbeing Analysis":
         """,
         unsafe_allow_html=True
     )
-    st.title("Lifestyle and Wellbeing Analysis :yin_yang:")
+
+    st.markdown(
+        """
+        <h1 style='color:#d39c5d;'>Lifestyle and Wellbeing Analysis ☯️</h1>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    #st.title("Lifestyle and Wellbeing Analysis :yin_yang:")
     st.header("Dataset: Lifestyle and Wellbeing")
     with st.expander("**Key Terms**"):
         st.markdown("""
@@ -859,7 +882,15 @@ elif page == "Work-Related Stress & Sleep":
         """,
         unsafe_allow_html=True
     )
-    st.title("Impact of Work-Related Stress on Sleep :construction_worker:")
+    st.markdown(
+        """
+        <h1 style='color:#d39c5d;'>Impact of Work-Related Stress on Sleep 👷</h1>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    
+    #st.title("Impact of Work-Related Stress on Sleep :construction_worker:")
     st.header("Dataset: Work Schedules and Sleep Patterns of Railroad Employees")
 
     # KEY TERMS
@@ -1056,6 +1087,15 @@ elif page == "Conclusion":
         """,
         unsafe_allow_html=True
     )
+
+    st.markdown(
+        """
+        <h1 style='color:#d39c5d;'>Conclusion 🛏️</h1>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    
     st.title("Conclusion :bed:")
 
 
