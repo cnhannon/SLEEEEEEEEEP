@@ -134,7 +134,7 @@ if page == "Introduction":
 
     st.markdown(
         """
-        <h1 style='color:#d9b891;'>Sleep, Lifestyle, and Job Factors: A Data Analysis Journey 📈</h1>
+        <h1 style='color:#d39c5d;'>Sleep, Lifestyle, and Job Factors: A Data Analysis Journey 📈</h1>
         """, 
         unsafe_allow_html=True
     )
