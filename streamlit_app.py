@@ -44,7 +44,7 @@ if page == "Home":
         """,
         unsafe_allow_html=True
     )
-    st.title("Home")
+    st.title("SLEEEEEEEEEP")
 
 # -----------------
 # INTRODUCTION PAGE
@@ -81,7 +81,7 @@ if page == "Introduction":
     # END
 
     st.title("Sleep, Lifestyle, and Job Factors: A Data Analysis Journey")
-    st.header("Introduction: The Modern Sleep Problem")
+    st.header("The Modern Sleep Problem")
     st.write("""
     Sleep quality is declining globally, influenced by numerous factors including lifestyle choices, consumption habits, and job-related stress.
     In this analysis, we explore how caffeine and alcohol consumption, stress, physical activity, and job-related stress impact sleep efficiency,
