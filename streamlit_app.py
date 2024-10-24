@@ -45,33 +45,31 @@ if page == "Home":
         unsafe_allow_html=True
     )
     st.title("SLEEEEEEEEEP")
-    st.header("Contributors")
-    col1, col2 = st.columns(2)
+
+    col1, col2, col3 = st.columns(3)
     with col1:
+        st.header("Contributors")
         st.markdown(
             """
             - **Sumeet Joshi**
             - **Julian Lwanga**
+            - **Leah Ramsamy**
+            - **Chris Hannon**
             """,
             unsafe_allow_html=True
         )
 
     with col2:
+        st.header("Datasets")
         st.markdown(
             """
-        - **Leah Ramsamy**
-        - **Chris Hannon**
+            [Sleep Efficiency Dataset](https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring)
+            [Sleep, Health, and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
+            [Lifestyle and Wellbeing Dataset](https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data)
+            [Work Schedules and Sleep Patterns of Railroad Employees Dataset](https://catalog.data.gov/dataset/work-schedules-and-sleep-patterns-of-railroad-employees-dispatcher-background-survey)
             """,
             unsafe_allow_html=True
         )
-    
-    #col1, col2, col3 = st.columns(3)
-
-
-
-    
-    #with col1:
-        
 
 # -----------------
 # INTRODUCTION PAGE
@@ -160,7 +158,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # ------------------------------------------
     # ADDED
-    st.subheader("[Dataset: Sleep Efficiency Dataset](https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring)")
+    st.subheader("Dataset: Sleep Efficiency")
     #st.markdown("[Click here to visit Streamlit's website](https://streamlit.io)")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
@@ -440,7 +438,7 @@ elif page == "Lifestyle Factors & Stress":
 
     st.header("Lifestyle Factors and Stress")
 
-    st.subheader("[Dataset: Sleep, Health, and Lifestyle](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)")
+    st.subheader("Dataset: Sleep, Health, and Lifestyle")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
 
@@ -620,7 +618,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         unsafe_allow_html=True
     )
     st.header("Lifestyle and Wellbeing Analysis")
-    st.subheader("[Dataset: Lifestyle and Wellbeing](https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data)")
+    st.subheader("Dataset: Lifestyle and Wellbeing")
     with st.expander("**Key Terms**"):
         st.markdown("""
         - **Daily_Stress**: How much stress do you typically experience every day.
@@ -827,7 +825,7 @@ elif page == "Work-Related Stress & Sleep":
         unsafe_allow_html=True
     )
     st.header("Impact of Work-Related Stress on Sleep")
-    st.subheader("[Dataset: Work Schedules and Sleep Patterns of Railroad Employees](https://catalog.data.gov/dataset/work-schedules-and-sleep-patterns-of-railroad-employees-dispatcher-background-survey)")
+    st.subheader("Dataset: Work Schedules and Sleep Patterns of Railroad Employees")
 
     # KEY TERMS
 #------------
