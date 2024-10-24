@@ -44,6 +44,7 @@ if page == "Home":
         """,
         unsafe_allow_html=True
     )
+    st.title("Home")
 
 # -----------------
 # INTRODUCTION PAGE
