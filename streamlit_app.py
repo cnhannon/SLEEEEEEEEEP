@@ -899,6 +899,8 @@ elif page == "Conclusion":
         3. In the case of **rail workers**, job insecurity and work surges directly contribute to reduced sleep quality, highlighting the importance of addressing job-related stress.
         By addressing these factors, individuals and organizations can take steps toward improving sleep health and overall well-being.
         """)
+    # Display an image in your Streamlit app
+    st.image("images/cont_p1.png", caption="sleeeeeeeeep", use_column_width=True)
 
 
 
