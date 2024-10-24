@@ -689,7 +689,7 @@ elif page == "Work-Related Stress & Sleep":
         unsafe_allow_html=True
     )
     st.header("Impact of Work-Related Stress on Sleep")
-    st.subheader("US Railworkers Stress")
+    st.subheader("Work Schedules and Sleep Patterns of Railroad Employees")
 
     # KEY TERMS
 #------------
