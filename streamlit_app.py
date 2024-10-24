@@ -765,7 +765,6 @@ elif page == "Work-Related Stress & Sleep":
             stress_factors_without_sleep_loss = sleep_loss_corr_renamed.index.drop('Sleep Loss')
         
             # Plot the heatmap using Plotly
-            st.subheader("Heatmap of Correlation with Sleep Loss")
             fig = go.Figure(data=go.Heatmap(
                 z=sleep_loss_corr_renamed['Sleep Loss'].values.reshape(1, -1),  # reshape for heatmap
                 x=stress_factors_without_sleep_loss,
