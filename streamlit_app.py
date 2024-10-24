@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 
 # Set wide page layout (optional but recommended for background images)
 st.set_page_config(layout="wide")
@@ -24,7 +25,7 @@ page = st.sidebar.radio("Go to", ["Introduction", "Consumption Habits & Sleep Ef
 if page == "Introduction":
 
     # START (TO ADD BACKGROUND IMAGE) - COPY AND PASTE BETWEEN START AND END. WILL NEED TO CHANGE IMAGE URL.
-    
+
     st.markdown(
         """
         <style>
@@ -35,12 +36,12 @@ if page == "Introduction":
             background-repeat: no-repeat;
             background-position: center;
         }
-    
+
         /* Optional: Customize the sidebar to have a slight transparency */
         .css-1d391kg {
             background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
         }
-    
+
         /* Optional: Customize the main content area background (if needed) */
         .css-18e3th9 {
             background-color: transparent;
@@ -56,7 +57,7 @@ if page == "Introduction":
     st.header("Introduction: The Modern Sleep Problem")
     st.write("""
     Sleep quality is declining globally, influenced by numerous factors including lifestyle choices, consumption habits, and job-related stress.
-    In this analysis, we explore how caffeine and alcohol consumption, stress, physical activity, and job-related stress impact sleep efficiency, 
+    In this analysis, we explore how caffeine and alcohol consumption, stress, physical activity, and job-related stress impact sleep efficiency,
     stress levels, and overall well-being. We are utilizing three datasets:
     - General Sleep Data: Provides individual sleep behaviors (e.g., caffeine, alcohol consumption, and sleep efficiency).
     - Health and Lifestyle Data: Examines how lifestyle attributes such as physical activity and stress affect sleep.
@@ -72,7 +73,7 @@ if page == "Introduction":
 elif page == "Consumption Habits & Sleep Efficiency":
 
     # START
-    
+
     st.markdown(
         """
         <style>
@@ -83,12 +84,12 @@ elif page == "Consumption Habits & Sleep Efficiency":
             background-repeat: no-repeat;
             background-position: center;
         }
-    
+
         /* Optional: Customize the sidebar to have a slight transparency */
         .css-1d391kg {
             background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
         }
-    
+
         /* Optional: Customize the main content area background (if needed) */
         .css-18e3th9 {
             background-color: transparent;
@@ -99,7 +100,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     )
 
     # END
-    
+
     st.header("The Impact of Consumption Habits on Sleep Efficiency")
     col1, col2, col3 = st.columns(3)
 
@@ -175,21 +176,21 @@ elif page == "Consumption Habits & Sleep Efficiency":
           - **Stable Sleep Duration** regardless of intake.
         """)
 
-    
+
     # ------------------------------------------
 
     # Deleted 3 graphs (scatter, candlestick, histogram)
-    
+
     import pandas as pd
     import plotly.express as px
     import plotly.graph_objects as go
     import seaborn as sns
     import matplotlib.pyplot as plt
     import streamlit as st
-    
+
     # Load the CSV file you uploaded (adjust the path if necessary)
     df = pd.read_csv("sleep_data_final.csv")  # Update the path
-    
+
     # Define age ranges for filtering
     age_ranges = {
         "Teenagers": (9, 19),
@@ -199,52 +200,52 @@ elif page == "Consumption Habits & Sleep Efficiency":
         "50s": (50, 59),
         "60s": (60, 69)
     }
-    
+
     # Add widgets for filtering the data
     st.sidebar.title("Filter Data")
-    
+
     # Dropdown for Age Group
     age_group = st.sidebar.selectbox(
         'Age Group:', options=["All"] + list(age_ranges.keys()), index=0
     )
-    
+
     # Dropdown for Gender
     gender = st.sidebar.selectbox(
         'Gender:', options=["All", "Male", "Female", "Other"], index=0
     )
-    
+
     # Slider for Alcohol Consumption
     alcohol_range = st.sidebar.slider(
         'Alcohol Consumption:', min_value=0, max_value=int(df['Alcohol_consumption'].max()), value=(0, 5)
     )
-    
+
     # Slider for Caffeine Consumption
     caffeine_range = st.sidebar.slider(
         'Caffeine Consumption:', min_value=0, max_value=int(df['Caffeine_consumption'].max()), value=(0, 200)
     )
 
-    
-    
+
+
  # -----------------------------
     # Function to filter data based on the selections
     def filter_data(df, age_group, gender, alcohol_range, caffeine_range):
         filtered_df = df.copy()
-    
+
         # Filter by age group
         if age_group != "All":
             age_min, age_max = age_ranges[age_group]
             filtered_df = filtered_df[(filtered_df["Age"] >= age_min) & (filtered_df["Age"] <= age_max)]
-    
+
         # Filter by gender
         if gender != "All":
             filtered_df = filtered_df[filtered_df["Gender"] == gender]
-    
+
         # Filter by alcohol consumption
         filtered_df = filtered_df[
             (filtered_df["Alcohol_consumption"] >= alcohol_range[0]) &
             (filtered_df["Alcohol_consumption"] <= alcohol_range[1])
         ]
-    
+
         # Filter by caffeine consumption
         filtered_df = filtered_df[
             (filtered_df["Caffeine_consumption"] >= caffeine_range[0]) &
@@ -252,14 +253,14 @@ elif page == "Consumption Habits & Sleep Efficiency":
         ]
 
         return filtered_df
-        
+
         # Apply the filters to the dataset
     filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
 # ---------------Heatmap moved-------------
 
     # Apply the filters to the dataset
     #filtered_df = filter_data(df, age_group, gender, alcohol_range, caffeine_range)
-    
+
     col1, col2, col3=st.columns(3)
 
     with col1:
@@ -274,9 +275,9 @@ elif page == "Consumption Habits & Sleep Efficiency":
             }
         )
         st.plotly_chart(fig_sleep_duration)
-    
+
     # !! Deleted a line chart !!
-    
+
     with col2:
         # ----------------------------ADDING-------------------------------------
         # Scatter Plot: Sleep Proportions (REM, Deep, Light) by Alcohol Consumption
@@ -317,32 +318,32 @@ elif page == "Consumption Habits & Sleep Efficiency":
         st.plotly_chart(fig_sleep_proportions_caffeine)
 
     # -----------------------------------------------------------------------
-    
-    
+
+
 
     # Create 'Age_Group' if it doesn't exist
     if "Age_Group" not in filtered_df.columns:
         filtered_df["Age_Group"] = pd.cut(filtered_df["Age"], bins=[0, 19, 29, 39, 49, 59, 69],
                                            labels=["Teenagers", "20s", "30s", "40s", "50s", "60s"])
-    
+
     # Create the pivot table for Sleep Efficiency
     heatmap_data = filtered_df.pivot_table(
         values='Sleep_efficiency_hours', index='Age_Group', columns='Gender', aggfunc='mean' #please add _hours to sleep efficiency so that it can be shown in hours not decimal
     )
-    
+
     # Set up the heatmap
     plt.figure(figsize=(10, 6), facecolor="#FAD8D3")  # Light pink background for the figure
     ax = sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", cbar=True)
-    
+
     # Set background color for the axes
     ax.set_facecolor("#FAD8D3")  # Light pink background for the axes
-    
+
     # Title and labels
     plt.title('Sleep Efficiency by Age Group and Gender', fontsize=16)
     plt.xlabel('Gender', fontsize=12)
     plt.ylabel('Age Group', fontsize=12)
 
-    
+
     # Show the heatmap using Streamlit
     st.pyplot(plt)
 
@@ -368,12 +369,12 @@ elif page == "Lifestyle Factors & Stress":
             background-repeat: no-repeat;
             background-position: center;
         }
-    
+
         /* Optional: Customize the sidebar to have a slight transparency */
         .css-1d391kg {
             background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
         }
-    
+
         /* Optional: Customize the main content area background (if needed) */
         .css-18e3th9 {
             background-color: transparent;
@@ -382,7 +383,7 @@ elif page == "Lifestyle Factors & Stress":
         """,
         unsafe_allow_html=True
     )
-    
+
     st.header("Lifestyle Factors and Stress")
 
     st.subheader("[Dataset: Sleep, Health, and Lifestyle](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)")
@@ -395,7 +396,7 @@ elif page == "Lifestyle Factors & Stress":
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
-        - **Higher stress levels are directly linked to poorer sleep quality**: 
+        - **Higher stress levels are directly linked to poorer sleep quality**:
             - As stress increases, participants tend to experience shorter, lighter, and more fragmented sleep.
         - **Physical activity can help mitigate the negative effects of stress on sleep**:
             - Those who engage in regular physical activity, even at moderate levels, report better sleep quality and longer sleep duration, despite high stress levels.
@@ -408,18 +409,18 @@ elif page == "Lifestyle Factors & Stress":
             - Individuals with lower stress levels and higher physical activity tend to fall into the “optimal sleep” category, getting the recommended 6-8 hours of sleep per night.
         """)
     # --------------------------------------------------------------------------------------------------
-    
-    
+
+
     col1, col2, col3 = st.columns(3)
-    
+
     # Graph 4: Stress vs Sleep Quality - Scatter plot
     with col1:
         fig4 = px.scatter(health_and_lifestyle_data, x="Stress_Level", y="Quality_of_Sleep", trendline="ols", title="Stress Levels vs Quality of Sleep", color_discrete_sequence=["#32CD32"], labels={"Stress_Level": "Stress Level", "Quality_of_Sleep": "Quality of Sleep"})
         st.plotly_chart(fig4, use_container_width=True)
-    
+
     # Graph 5: Physical Activity vs Sleep Quality - Bar plot (changed from line plot)
     with col2:
-        fig100 = px.scatter_3d(health_and_lifestyle_data, x='Physical_Activity_Level', y='Stress_Level', z='Sleep_Duration', 
+        fig100 = px.scatter_3d(health_and_lifestyle_data, x='Physical_Activity_Level', y='Stress_Level', z='Sleep_Duration',
             color='Physical_Activity_Level', title="Interaction of Physical Activity, Stress Level, and Sleep Duration with Age",
             labels={'Physical_Activity_Level': 'Physical Activity', 'Stress_Level': 'Stress Level', 'Sleep_Duration': 'Sleep Duration', 'Age': 'Age'})
         st.plotly_chart(fig100, use_container_width=True)
@@ -428,7 +429,7 @@ elif page == "Lifestyle Factors & Stress":
     # Graph 6: Sleep Quality by Occupation - Bar chart
     with col3:
         # Use the correct columns from your dataset for the bubble chart
-        fig6 = px.scatter(health_and_lifestyle_data, 
+        fig6 = px.scatter(health_and_lifestyle_data,
                          x="Sleep_Duration",  # Correct column for sleep hours
                          y="Daily_Steps",  # Correct column for daily steps
                          size="Stress_Level",  # Correct column for stress level
@@ -458,34 +459,34 @@ elif page == "Lifestyle Factors & Stress 2":
     import seaborn as sns
     import matplotlib.pyplot as plt
     import streamlit as st
-    
+
     # Load the CSV file (adjust the path as necessary)
     df = pd.read_csv("lifestylewellbeingdata.csv")
-    
+
     # Filter out invalid DAILY_STRESS values and convert to integer
     df_clean = df[df["DAILY_STRESS"] != '36526']
     df_clean["DAILY_STRESS"] = df_clean["DAILY_STRESS"].astype(int)
-    
+
     # Converting 'Timestamp' column to datetime format and extracting Date
     df_clean['Date'] = df['Timestamp'].str.split(' ').str[0]
     df_clean = df_clean.drop_duplicates()
-    
+
     # Moving 'Date' to the first column
     first_column = df_clean.pop('Date')
     df_clean.insert(0, 'Date', first_column)
-    
+
     # Correlation Analysis
     lifestyle_columns = ['SLEEP_HOURS', 'DAILY_STRESS', 'DAILY_STEPS', 'WORK_LIFE_BALANCE_SCORE', 'TIME_FOR_PASSION']
     correlation_matrix = df_clean[lifestyle_columns].corr()
-    
+
     # Page 6: Lifestyle and Wellbeing Analysis
     st.header("Lifestyle and Wellbeing Analysis")
-    
+
     # Display the correlation matrix
     st.subheader("Correlation Matrix")
     st.write("Correlation between Sleep Hours and Lifestyle Variables:")
     st.dataframe(correlation_matrix)
-    
+
     # Plotting the Distribution of Sleep Categories
     def categorize_sleep(hours):
         if hours < 6:
@@ -494,9 +495,9 @@ elif page == "Lifestyle Factors & Stress 2":
             return 'Optimal Sleep'
         else:
             return 'Long Sleep'
-    
+
     df_clean['SLEEP_CATEGORY'] = df_clean['SLEEP_HOURS'].apply(categorize_sleep)
-    
+
     st.subheader("Distribution of Sleep Categories")
     fig, ax = plt.subplots()
     sns.countplot(x='SLEEP_CATEGORY', data=df_clean, palette='Set3', ax=ax)
@@ -504,7 +505,7 @@ elif page == "Lifestyle Factors & Stress 2":
     ax.set_xlabel("Sleep Category", fontsize=12)
     ax.set_ylabel("Count", fontsize=12)
     st.pyplot(fig)
-    
+
     # Average Sleep Hours by Age and Gender
     st.subheader("Average Sleep Hours by Age and Gender")
     avg_sleep_by_age_gender = df_clean.groupby(['AGE', 'GENDER'])['SLEEP_HOURS'].mean().unstack()
@@ -515,7 +516,7 @@ elif page == "Lifestyle Factors & Stress 2":
     ax.set_xlabel('Age Group')
     plt.xticks(rotation=0)
     st.pyplot(fig)
-    
+
     # Regression Plot: Sleep Hours vs Work-Life Balance Score
     st.subheader("Sleep Hours vs Work-Life Balance Score")
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -524,7 +525,7 @@ elif page == "Lifestyle Factors & Stress 2":
     ax.set_xlabel('Sleep Hours', fontsize=12)
     ax.set_ylabel('Work-Life Balance Score', fontsize=12)
     st.pyplot(fig)
-    
+
     # Regression Plot: Sleep Hours vs Daily Stress
     st.subheader("Sleep Hours vs Daily Stress")
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -550,12 +551,12 @@ elif page == "Lifestyle and Wellbeing Analysis":
             background-repeat: no-repeat;
             background-position: center;
         }
-    
+
         /* Optional: Customize the sidebar to have a slight transparency */
         .css-1d391kg {
             background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
         }
-    
+
         /* Optional: Customize the main content area background (if needed) */
         .css-18e3th9 {
             background-color: transparent;
@@ -604,32 +605,32 @@ elif page == "Lifestyle and Wellbeing Analysis":
         import seaborn as sns
         import matplotlib.pyplot as plt
         import streamlit as st
-        
+
         # Load the CSV file (adjust the path as necessary)
         df = pd.read_csv("lifestylewellbeingdata.csv")
-        
+
         # Filter out invalid DAILY_STRESS values and convert to integer
         df_clean = df[df["DAILY_STRESS"] != '36526']
         df_clean["DAILY_STRESS"] = df_clean["DAILY_STRESS"].astype(int)
-        
+
         # Converting 'Timestamp' column to datetime format and extracting Date
         df_clean['Date'] = df['Timestamp'].str.split(' ').str[0]
         df_clean = df_clean.drop_duplicates()
-        
+
         # Moving 'Date' to the first column
         first_column = df_clean.pop('Date')
         df_clean.insert(0, 'Date', first_column)
-        
+
         # Correlation Analysis
         lifestyle_columns = ['SLEEP_HOURS', 'DAILY_STRESS', 'DAILY_STEPS', 'WORK_LIFE_BALANCE_SCORE', 'TIME_FOR_PASSION']
         correlation_matrix = df_clean[lifestyle_columns].corr()
-        
-        
+
+
         # Display the correlation matrix
         # st.subheader("Correlation Matrix")
         # st.write("Correlation between Sleep Hours and Lifestyle Variables:")
         # st.dataframe(correlation_matrix)
-        
+
         # Plotting the Distribution of Sleep Categories
         def categorize_sleep(hours):
             if hours < 6:
@@ -638,48 +639,110 @@ elif page == "Lifestyle and Wellbeing Analysis":
                 return 'Optimal Sleep'
             else:
                 return 'Long Sleep'
-        
+
         df_clean['SLEEP_CATEGORY'] = df_clean['SLEEP_HOURS'].apply(categorize_sleep)
-        
+
         st.subheader("Distribution of Sleep Categories")
-        fig, ax = plt.subplots()
-        sns.countplot(x='SLEEP_CATEGORY', data=df_clean, palette='Set3', ax=ax)
-        ax.set_title("Distribution of Sleep Categories", fontsize=16)
-        ax.set_xlabel("Sleep Category", fontsize=12)
-        ax.set_ylabel("Count", fontsize=12)
-        st.pyplot(fig)
-        
+        # fig, ax = plt.subplots()
+        # sns.countplot(x='SLEEP_CATEGORY', data=df_clean, palette='Set3', ax=ax)
+        # ax.set_title("Distribution of Sleep Categories", fontsize=16)
+        # ax.set_xlabel("Sleep Category", fontsize=12)
+        # ax.set_ylabel("Count", fontsize=12)
+        # st.pyplot(fig)
+        # Assuming df_clean contains the 'SLEEP_CATEGORY' column
+        fig = px.histogram(df_clean, x='SLEEP_CATEGORY', title='Distribution of Sleep Categories',
+                        labels={'SLEEP_CATEGORY': 'Sleep Category'},
+                        color_discrete_sequence=px.colors.qualitative.Set3)
+        fig.update_layout(
+                width=400,  # 8 inches approx
+                height=300  # 6 inches approx
+            )
+        # Show the figure using Plotly
+        st.plotly_chart(fig)
+
         # Average Sleep Hours by Age and Gender
         st.subheader("Average Sleep Hours by Age and Gender")
+        # avg_sleep_by_age_gender = df_clean.groupby(['AGE', 'GENDER'])['SLEEP_HOURS'].mean().unstack()
+        # fig, ax = plt.subplots(figsize=(10, 6))
+        # avg_sleep_by_age_gender.plot(kind='bar', ax=ax)
+        # ax.set_title('Average Sleep Hours by Age and Gender', fontsize=14)
+        # ax.set_ylabel('Average Sleep Hours')
+        # ax.set_xlabel('Age Group')
+        # plt.xticks(rotation=0)
+        # st.pyplot(fig)
+
         avg_sleep_by_age_gender = df_clean.groupby(['AGE', 'GENDER'])['SLEEP_HOURS'].mean().unstack()
-        fig, ax = plt.subplots()
-        avg_sleep_by_age_gender.plot(kind='bar', ax=ax)
-        ax.set_title('Average Sleep Hours by Age and Gender', fontsize=14)
-        ax.set_ylabel('Average Sleep Hours')
-        ax.set_xlabel('Age Group')
-        plt.xticks(rotation=0)
-        st.pyplot(fig)
+
+
+        fig = go.Figure()
+
+        # Loop through each gender column and add a bar trace
+        for gender in avg_sleep_by_age_gender.columns:
+            fig.add_trace(go.Bar(
+                x=avg_sleep_by_age_gender.index,  # Age groups
+                y=avg_sleep_by_age_gender[gender],  # Average sleep hours
+                name=gender  # Gender as the label for each trace
+            ))
+
+        # Set the title and labels
+        fig.update_layout(
+            title='Average Sleep Hours by Age and Gender',
+            xaxis_title='Age Group',
+            yaxis_title='Average Sleep Hours',
+            barmode='group',
+            width=400,  # 8 inches approx
+            height=300# Grouped bar mode
+        )
+
+        st.plotly_chart(fig)
 
 
     with col2:
         # Regression Plot: Sleep Hours vs Work-Life Balance Score
-        st.subheader("Sleep Hours vs Work-Life Balance")
-        fig, ax = plt.subplots(figsize=(8, 6))
-        sns.regplot(x=df_clean['SLEEP_HOURS'], y=df_clean['WORK_LIFE_BALANCE_SCORE'], scatter_kws={'s':50}, line_kws={'color':'red'}, ax=ax)
-        ax.set_title('Sleep Hours vs Work-Life Balance', fontsize=14)
-        ax.set_xlabel('Sleep Hours', fontsize=12)
-        ax.set_ylabel('Work-Life Balance Score', fontsize=12)
-        st.pyplot(fig)
-        
+        # st.subheader("Sleep Hours vs Work-Life Balance")
+        # fig, ax = plt.subplots(figsize=(8, 6))
+        # sns.regplot(x=df_clean['SLEEP_HOURS'], y=df_clean['WORK_LIFE_BALANCE_SCORE'], scatter_kws={'s':50}, line_kws={'color':'red'}, ax=ax)
+        # ax.set_title('Sleep Hours vs Work-Life Balance', fontsize=14)
+        # ax.set_xlabel('Sleep Hours', fontsize=12)
+        # ax.set_ylabel('Work-Life Balance Score', fontsize=12)
+        # st.pyplot(fig)
+
+        fig = px.scatter(df_clean, x='SLEEP_HOURS', y='WORK_LIFE_BALANCE_SCORE',
+                 trendline='ols',  # Ordinary least squares regression line
+                 title='Sleep Hours vs Work-Life Balance',
+                 labels={'SLEEP_HOURS': 'Sleep Hours', 'WORK_LIFE_BALANCE_SCORE': 'Work-Life Balance Score'},
+                 trendline_color_override='red')
+
+        fig.update_layout(
+                width=400,  # 8 inches approx
+                height=300  # 6 inches approx
+            )
+
+        st.plotly_chart(fig)
+
+
         # Regression Plot: Sleep Hours vs Daily Stress
         st.subheader("Sleep Hours vs Daily Stress")
-        fig, ax = plt.subplots(figsize=(8, 6))
-        sns.regplot(x=df_clean['SLEEP_HOURS'], y=df_clean['DAILY_STRESS'], scatter_kws={'s':50}, line_kws={'color':'blue'}, ax=ax)
-        ax.set_title('Sleep Hours vs Daily Stress', fontsize=14)
-        ax.set_xlabel('Sleep Hours', fontsize=12)
-        ax.set_ylabel('Daily Stress', fontsize=12)
-        st.pyplot(fig)
 
+        # fig, ax = plt.subplots(figsize=(8, 6))
+        # sns.regplot(x=df_clean['SLEEP_HOURS'], y=df_clean['DAILY_STRESS'], scatter_kws={'s':50}, line_kws={'color':'blue'}, ax=ax)
+        # ax.set_title('Sleep Hours vs Daily Stress', fontsize=14)
+        # ax.set_xlabel('Sleep Hours', fontsize=12)
+        # ax.set_ylabel('Daily Stress', fontsize=12)
+        # st.pyplot(fig)
+
+        fig = px.scatter(df_clean, x='SLEEP_HOURS', y='DAILY_STRESS',
+                 trendline='ols',  # Add regression line
+                 title='Sleep Hours vs Daily Stress',
+                 labels={'SLEEP_HOURS': 'Sleep Hours', 'DAILY_STRESS': 'Daily Stress'},
+                 trendline_color_override='blue')
+
+        fig.update_layout(
+                width=400,  # 8 inches approx
+                height=300  # 6 inches approx
+            )
+
+        st.plotly_chart(fig)
 
 # -----------------------------
 # WORK-RELATED STRESS AND SLEEP
@@ -695,12 +758,12 @@ elif page == "Work-Related Stress & Sleep":
             background-repeat: no-repeat;
             background-position: center;
         }
-    
+
         /* Optional: Customize the sidebar to have a slight transparency */
         .css-1d391kg {
             background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
         }
-    
+
         /* Optional: Customize the main content area background (if needed) */
         .css-18e3th9 {
             background-color: transparent;
@@ -735,13 +798,13 @@ elif page == "Work-Related Stress & Sleep":
     col1, col2 = st.columns(2)
     # Graph 7: Job Security vs Sleep Loss - Scatter plot
     with col1:
-        
+
         import plotly.express as px
         import plotly.graph_objects as go
-        
+
         # Load your newly uploaded rail workers dataset
         df_railworkers_clean = pd.read_csv("df_railworkers_clean(1).csv")
-        
+
         # Dictionary for more descriptive labels
         variable_labels = {
             'Job_pressure': 'Job Pressure',
@@ -756,35 +819,35 @@ elif page == "Work-Related Stress & Sleep":
             'TimeOff': 'Time Off',
             'Sleep_loss': 'Sleep Loss'
         }
-        
+
         # Correlation Analysis Function
         def perform_correlation_analysis(df, stress_columns):
             # Ensure all columns in the list exist in the DataFrame before performing correlation
             missing_columns = [col for col in stress_columns + ['Sleep_loss'] if col not in df.columns]
             if missing_columns:
                 raise KeyError(f"The following columns are missing from the DataFrame: {missing_columns}")
-        
+
             correlation_matrix = df[stress_columns + ['Sleep_loss']].corr()
             return correlation_matrix['Sleep_loss'].sort_values(ascending=False)
-        
+
         # Full list of stress-related columns
         stress_columns = [
             'Job_pressure', 'Emergencies', 'Lack_of_control', 'Mgmt_policies',
             'Surges_in_work', 'Communication', 'Inadeq_Staff', 'Resp_for_others_safety',
             'BreakTime', 'TimeOff'
         ]
-        
+
         # Run the correlation analysis
         try:
             sleep_loss_corr = perform_correlation_analysis(df_railworkers_clean, stress_columns)
-            
+
             # Rename the index in the Series and convert it to a DataFrame with 'Sleep Loss' as the column name
             sleep_loss_corr_renamed = sleep_loss_corr.rename(index=variable_labels).to_frame()
             sleep_loss_corr_renamed.columns = ['Sleep Loss']
-            
+
             # Remove 'Sleep Loss' from the x-axis variables
             stress_factors_without_sleep_loss = sleep_loss_corr_renamed.index.drop('Sleep Loss')
-        
+
             # Plot the heatmap using Plotly
             fig = go.Figure(data=go.Heatmap(
                 z=sleep_loss_corr_renamed['Sleep Loss'].values.reshape(1, -1),  # reshape for heatmap
@@ -795,33 +858,33 @@ elif page == "Work-Related Stress & Sleep":
                 zmin=0.2,  # correlation ranges from -1 to 1
                 zmax=0.6
             ))
-        
+
             fig.update_layout(
                 title="Correlation of Stress Factors with Sleep Loss",
                 xaxis_title="Stress Factors",
                 yaxis_title="",
                 height=400
             )
-        
+
             # Show the heatmap in Streamlit
             st.plotly_chart(fig)
-        
+
         except KeyError as e:
             st.error(f"Error: {e}")
 
 
 
 
-        
-    
+
+
     # Graph 8: Work Surges vs Sleep Loss - Heatmap for correlation visualization
     with col2:
         from sklearn.linear_model import LinearRegression
         from sklearn.model_selection import train_test_split
-        
+
         # Load the rail workers dataset
-        
-        
+
+
         # Define the stress-related columns and the target variable (Sleep_loss)
         stress_columns = [
             'Job_pressure', 'Emergencies', 'Lack_of_control', 'Mgmt_policies',
@@ -829,18 +892,18 @@ elif page == "Work-Related Stress & Sleep":
             'BreakTime', 'TimeOff'
         ]
         target_column = 'Sleep_loss'
-        
+
         # Split the data into features (X) and target (y)
         X = df_railworkers_clean[stress_columns]
         y = df_railworkers_clean[target_column]
-        
+
         # Train-test split for model training
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
         # Train a linear regression model
         model = LinearRegression()
         model.fit(X_train, y_train)
-        
+
         # Dictionary for more descriptive labels
         variable_labels = {
             'Job_pressure': 'Job Pressure',
@@ -854,24 +917,24 @@ elif page == "Work-Related Stress & Sleep":
             'BreakTime': 'Break Time',
             'TimeOff': 'Time Off'
         }
-        
+
         # Display significant coefficients with readable labels
         significant_coeffs = pd.DataFrame({
             'Variable': stress_columns,
             'Coefficient': model.coef_
         }).sort_values(by='Coefficient', ascending=False)
-        
+
         # Map the variables to more descriptive labels
         significant_coeffs['Variable'] = significant_coeffs['Variable'].map(variable_labels)
-        
+
         # Plot the bar chart with the updated labels
         fig = px.bar(significant_coeffs.head(5),
                      x='Coefficient',
                      y='Variable',
-                     orientation='h', 
+                     orientation='h',
                      color_discrete_sequence=['#A2748C'],
                      title='Top 5 Predictors of Sleep Loss')
-        
+
         # Show the updated plot in Streamlit
         st.plotly_chart(fig)
 
@@ -892,12 +955,12 @@ elif page == "Conclusion":
             background-repeat: no-repeat;
             background-position: center;
         }
-    
+
         /* Optional: Customize the sidebar to have a slight transparency */
         .css-1d391kg {
             background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
         }
-    
+
         /* Optional: Customize the main content area background (if needed) */
         .css-18e3th9 {
             background-color: transparent;
@@ -907,7 +970,7 @@ elif page == "Conclusion":
         unsafe_allow_html=True
     )
     st.header("Conclusion")
-    
+
 
     st.write("""
     Through this analysis, we have uncovered key insights about the various factors influencing sleep quality:
@@ -928,8 +991,3 @@ elif page == "Conclusion":
         """)
     # Display an image in your Streamlit app
     st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", caption="sleeeeeeeeep", use_column_width=True)
-
-
-
-
-
