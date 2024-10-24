@@ -54,7 +54,7 @@ if page == "Home":
             - **Sumeet Joshi**
             - **Julian Lwanga**
             - **Leah Ramsamy**
-            - **Chris Hannon**
+            - **Chris Hannon** :thumbsup:
             """,
             unsafe_allow_html=True
         )
