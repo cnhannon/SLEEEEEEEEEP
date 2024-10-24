@@ -844,7 +844,7 @@ elif page == "Work-Related Stress & Sleep":
         """,
         unsafe_allow_html=True
     )
-    st.title("Impact of Work-Related Stress on Sleep :shipit:")
+    st.title("Impact of Work-Related Stress on Sleep :construction_worker:")
     st.header("Dataset: Work Schedules and Sleep Patterns of Railroad Employees")
 
     # KEY TERMS
