@@ -173,7 +173,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # END
 
-    st.title(":wine_glass::coffee:The Impact of Consumption Habits on Sleep Efficiency")
+    st.title(":wine_glass: :coffee: The Impact of Consumption Habits on Sleep Efficiency")
     col1, col2, col3 = st.columns(3)
 
     # ------------------------------------------
