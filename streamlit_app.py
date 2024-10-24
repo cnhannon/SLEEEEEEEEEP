@@ -411,6 +411,8 @@ elif page == "Lifestyle Factors & Stress":
                          size_max=20,
                          color_discrete_sequence=vibrant_colors)  # Adjust max size of bubbles
 
+        # Display the bubble chart in Streamlit
+        st.plotly_chart(fig6)
 
 
 
