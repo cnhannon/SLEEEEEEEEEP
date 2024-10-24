@@ -59,7 +59,7 @@ if page == "Home":
             unsafe_allow_html=True
         )
 
-    with col2:
+    with col3:
         st.header("Tools")
         st.markdown(
             """
@@ -75,8 +75,18 @@ if page == "Home":
             unsafe_allow_html=True
         )
     
-    with col3:
+    with col2:
         st.header("Datasets")
+        st.markdown(
+            """
+            <style>
+            a {
+                color: #000002;  /* Replace with your desired hex color */
+            }
+            </style>
+            """, 
+            unsafe_allow_html=True
+        )
         st.markdown(
             """
             - [Sleep Efficiency Dataset](https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring)
