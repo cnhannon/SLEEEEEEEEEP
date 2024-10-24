@@ -374,7 +374,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         # Scatter Plot: Sleep Proportions (REM, Deep, Light) by Caffeine Consumption
         fig_sleep_proportions_caffeine = go.Figure()
         for sleep_type, color in zip(['Rem_Sleep_Duration', 'Deep_Sleep_Duration', 'Light_Sleep_Duration'],
-                                      ['purple', 'teal', 'yellow']):
+                                      ['purple', 'green', 'yellow']):
             fig_sleep_proportions_caffeine.add_trace(go.Scatter(
                 x=filtered_df['Caffeine_consumption'], y=filtered_df[sleep_type],
                 mode='markers', name=sleep_type.replace('_', ' ').capitalize(),
