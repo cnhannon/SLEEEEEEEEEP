@@ -141,7 +141,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         # Additional note
 
     # Average consumption metrics scorecard in column 3
-    with col3:
+    with col2:
         average_caffeine = 22.345133  # Average caffeine consumption in mg
         average_alcohol = 1.201327     # Average alcohol consumption in ounces
         # Title of the scorecard
@@ -158,9 +158,9 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
 
  #---------------------------------------------------
-    col1, col2=st.columns(2)
+    #col1, col2=st.columns(2)
     # Key Insights section
-    with col1:
+    with col3:
         st.subheader("Key Insights")
         st.markdown("""
         - **Caffeine’s Impact on REM Sleep**:
