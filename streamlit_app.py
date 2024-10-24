@@ -46,7 +46,7 @@ if page == "Home":
     )
     st.markdown(
         """
-        <h1 style='color:#1f77b4;'>SLEEEEEEEEEP 😴</h1>
+        <h1 style='color:#d39c5d;'>SLEEEEEEEEEP 😴</h1>
         """, 
         unsafe_allow_html=True
     )
