@@ -30,7 +30,7 @@ if page == "Introduction":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/01.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/02.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
