@@ -400,15 +400,15 @@ elif page == "Lifestyle Factors & Stress":
     with col3:
         # Use the correct columns from your dataset for the bubble chart
         fig6 = px.scatter(health_and_lifestyle_data, 
-                         x="Sleep_Duration",  # Correct column for sleep hours
-                         y="Daily_Steps",  # Correct column for daily steps
-                         size="Stress_Level",  # Correct column for stress level
-                         color="Age",  # Correct column for age
-                         hover_name="Gender",  # Correct column for gender
-                         title="Sleep Duration vs Daily Steps with Stress Level",
-                         labels={"Sleep_Duration": "Sleep Duration (hours)", "Daily_Steps": "Daily Steps"},
-                         size_max=20,
-                         color_discrete_sequence=vibrant_colors)  # Adjust max size of bubbles
+                          x="Sleep_Duration",  # Correct column for sleep hours
+                          y="Daily_Steps",  # Correct column for daily steps
+                          size="Stress_Level",  # Correct column for stress level
+                          color="Age",  # Correct column for age
+                          hover_name="Gender",  # Correct column for gender
+                          title="Sleep Duration vs Daily Steps with Stress Level",
+                          labels={"Sleep_Duration": "Sleep Duration (hours)", "Daily_Steps": "Daily Steps"},
+                          size_max=20,
+                          color_discrete_sequence=vibrant_colors)  # Adjust max size of bubbles
 
 
 
