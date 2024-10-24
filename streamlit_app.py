@@ -646,6 +646,9 @@ elif page == "Lifestyle and Wellbeing Analysis":
         st.pyplot(fig)
 
     with col3:
+        import pandas as pd
+        import seaborn as sns
+        import matplotlib.pyplot as plt
         st.subheader("Average Sleep Hours vs Fruit & veggies consumption")
         avg_sleep_by_fruits_veggies = df_clean.groupby(['age','fruits_veggies'])['sleep_hours'].mean().reset_index()
         sns.set_theme(style="whitegrid")
