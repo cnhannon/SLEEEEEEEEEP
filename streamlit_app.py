@@ -456,7 +456,7 @@ elif page == "Lifestyle Factors & Stress":
         unsafe_allow_html=True
     )
 
-    st.title("Lifestyle Factors and Stress")
+    st.title("Lifestyle Factors and Stress :runner:")
 
     st.header("Dataset: Sleep, Health, and Lifestyle")
     # Button with an ":information_source:" icon and expander for definitions
