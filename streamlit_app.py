@@ -60,7 +60,7 @@ if page == "Home":
         )
 
     with col3:
-        st.header("Tools")
+        st.header("Tools :hammer: :wrench:")
         st.markdown(
             """
             - Google Colab
