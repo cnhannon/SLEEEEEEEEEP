@@ -664,7 +664,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
 
     with col2:
         # Regression Plot: Sleep Hours vs Work-Life Balance Score
-        st.subheader("Sleep Hours vs Work-Life Balance Score")
+        st.subheader("Sleep Hours vs Work-Life Balance")
         fig, ax = plt.subplots(figsize=(8, 6))
         sns.regplot(x=df_clean['SLEEP_HOURS'], y=df_clean['WORK_LIFE_BALANCE_SCORE'], scatter_kws={'s':50}, line_kws={'color':'red'}, ax=ax)
         ax.set_title('Sleep Hours vs Work-Life Balance', fontsize=14)
