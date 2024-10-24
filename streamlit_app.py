@@ -60,6 +60,22 @@ if page == "Home":
         )
 
     with col2:
+        st.header("Tools")
+        st.markdown(
+            """
+            - Google Colab
+            - Google BigQuery
+            - Google Sheets
+            - Google Docs
+            - Streamlit
+            - GitHub
+            - Trello
+            - Slack
+            """,
+            unsafe_allow_html=True
+        )
+    
+    with col3:
         st.header("Datasets")
         st.markdown(
             """
