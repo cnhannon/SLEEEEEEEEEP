@@ -385,7 +385,7 @@ elif page == "Lifestyle Factors & Stress":
     
     st.header("Lifestyle Factors and Stress")
 
-    st.subheader("Dataset: Sleep, Health, and Lifestyle")
+    st.subheader("[Dataset: Sleep, Health, and Lifestyle](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
 
@@ -544,7 +544,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         unsafe_allow_html=True
     )
     st.header("Lifestyle and Wellbeing Analysis")
-    st.subheader("Dataset: Lifestyle and Wellbeing")
+    st.subheader("[Dataset: Lifestyle and Wellbeing](https://www.kaggle.com/datasets/ydalat/lifestyle-and-wellbeing-data)")
     with st.expander("**Key Terms**"):
         st.markdown("""
         - **Fruits_Veggies**: How many fruits or vegetables are eaten per day.
@@ -690,7 +690,7 @@ elif page == "Work-Related Stress & Sleep":
         unsafe_allow_html=True
     )
     st.header("Impact of Work-Related Stress on Sleep")
-    st.subheader("Dataset: Work Schedules and Sleep Patterns of Railroad Employees")
+    st.subheader("[Dataset: Work Schedules and Sleep Patterns of Railroad Employees](https://catalog.data.gov/dataset/work-schedules-and-sleep-patterns-of-railroad-employees-dispatcher-background-survey)")
 
     # KEY TERMS
 #------------
