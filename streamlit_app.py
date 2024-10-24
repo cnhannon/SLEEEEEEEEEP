@@ -395,7 +395,8 @@ elif page == "Lifestyle Factors & Stress":
             color='Physical_Activity_Level', title="Interaction of Physical Activity, Stress Level, and Sleep Duration with Age",
             labels={'Physical_Activity_Level': 'Physical Activity', 'Stress_Level': 'Stress Level', 'Sleep_Duration': 'Sleep Duration', 'Age': 'Age'})
         st.plotly_chart(fig100, use_container_width=True)
-    
+
+    vibrant_colors = px.colors.qualitative.Bold
     # Graph 6: Sleep Quality by Occupation - Bar chart
     with col3:
         # Use the correct columns from your dataset for the bubble chart
