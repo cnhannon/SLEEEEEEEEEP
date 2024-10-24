@@ -545,7 +545,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         - **Work_Life_Balance_Score**: Score calculated by AH.COM algorithm.
         """)
     # Key Insights section
-    st.subheader(“Key Insights”)
+    st.subheader("Key Insights")
     col1, col2, col3 = st.columns(3)
     with col1:
         st.markdown("""
@@ -568,7 +568,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         - **High Stress and Sleep Quality**:
           - Increased stress correlates with shorter sleep and poorer sleep quality.
         """)
-    """
+    '''
     st.subheader("Key Insights")
     st.markdown("""
     - **Key Insights for Lifestyle and Wellbeing Analysis**:
@@ -584,7 +584,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
     - **High Stress and Sleep Quality**:
       - Increased stress correlates with shorter sleep and poorer sleep quality.
     """)
-    """
+    '''
     col1, col2, col3 = st.columns(3)
 
     with col1:
