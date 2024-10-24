@@ -257,7 +257,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     #col1, col2=st.columns(2)
     # Key Insights section
     with col3:
-        st.subheader("Key Insights")
+        st.subheader("Key Insights :mag:")
         st.markdown("""
         - **Caffeine’s Impact on REM Sleep**:
           - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
@@ -494,7 +494,7 @@ elif page == "Lifestyle Factors & Stress":
 
     #Key Insights
     # --------------------------------------------------------------------------------------------------
-    st.subheader("Key Insights")
+    st.subheader("Key Insights :mag:")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
@@ -683,7 +683,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         - **Work Life Balance Score**: Score calculated by AH.COM algorithm.
         """)
     # Key Insights section
-    st.subheader("Key Insights")
+    st.subheader("Key Insights :mag:")
     col1, col2, col3 = st.columns(3)
     with col1:
         st.markdown("""
@@ -902,7 +902,7 @@ elif page == "Work-Related Stress & Sleep":
         - **Sleep Stress Correlation**: Summarising the relationship between work-related factors and sleep disturbances, especially focusing on stress levels.
         """)
     # Key Insights section
-    st.subheader("Key Insights")
+    st.subheader("Key Insights :mag:")
     st.markdown("""
     - **High Stress Levels**:
       - Strong correlation with **Sleep Loss**, especially due to lack of control and time off.
