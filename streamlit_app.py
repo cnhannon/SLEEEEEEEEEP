@@ -568,23 +568,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         - **High Stress and Sleep Quality**:
           - Increased stress correlates with shorter sleep and poorer sleep quality.
         """)
-    '''
-    st.subheader("Key Insights")
-    st.markdown("""
-    - **Key Insights for Lifestyle and Wellbeing Analysis**:
-      - Differences in sleep patterns and stress levels across different groups.
-    - **Gender Differences in Sleep**:
-      - Highlighting variations in sleep habits and stress responses based on gender.
-    - **Sleep Categorization**:
-      - **Short Sleepers**: Less than 6 hours of sleep.
-      - **Adequate Sleepers**: 6 to 8 hours of sleep.
-      - **Long Sleepers**: More than 8 hours of sleep.
-    - **High Stress and Sleep Disruptions**:
-      - High stress leads to sleep disruptions or insufficient sleep.
-    - **High Stress and Sleep Quality**:
-      - Increased stress correlates with shorter sleep and poorer sleep quality.
-    """)
-    '''
+
     col1, col2, col3 = st.columns(3)
 
     with col1:
