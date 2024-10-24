@@ -596,8 +596,8 @@ elif page == "Lifestyle and Wellbeing Analysis":
         - **High Stress and Sleep Quality**:
           - Increased stress correlates with shorter sleep and poorer sleep quality.
         """)
-
-    col1, col2, col3 = st.columns(3)
+# CHANGED TO 2 COL
+    col1, col2 = st.columns(2)
 
     with col1:
 
