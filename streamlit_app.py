@@ -646,7 +646,15 @@ elif page == "Lifestyle and Wellbeing Analysis":
         st.pyplot(fig)
 
     with col3:
-        st.subheader(".")
+        st.subheader("Average Sleep Hours vs Fruit & veggies consumption")
+        avg_sleep_by_fruits_veggies = df_clean.groupby(['age','fruits_veggies'])['sleep_hours'].mean().reset_index()
+        sns.set_theme(style="whitegrid")
+        plt.figure(figsize=(10, 6))
+        sns.barplot(x='fruits_veggies', y='sleep_hours', hue='age', data=avg_sleep_by_fruits_veggies, palette='coolwarm')
+        plt.title('Average Sleep Hours vs Fruits & veggies consumption ', fontsize=14)
+        plt.xlabel('fruits & Veggies', fontsize=12)
+        plt.ylabel('Average Sleep Hours', fontsize=12)
+        plt.show()
 
 # -----------------------------
 # WORK-RELATED STRESS AND SLEEP
