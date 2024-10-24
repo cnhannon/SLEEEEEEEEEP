@@ -293,6 +293,9 @@ elif page == "Consumption Habits & Sleep Efficiency":
             yaxis_title="Sleep Duration (hours)",
             showlegend=True
         )
+            fig_sleep_duration.update_layout(
+        paper_bgcolor='#1E0748',  # Background for outside the chart (paper)
+        plot_bgcolor='#1E0748'    # Background for the chart area (plot)
         st.plotly_chart(fig_sleep_proportions_alcohol)
 
     with col3:
