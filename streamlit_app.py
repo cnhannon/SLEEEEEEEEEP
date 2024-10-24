@@ -855,38 +855,26 @@ elif page == "Work-Related Stress & Sleep":
 # CONCLUSION
 # ----------
 elif page == "Conclusion":
-    st.markdown(
-        """
-        <style>
-        /* Apply the background image to the entire app */
-        .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/06.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    
-        /* Optional: Customize the sidebar to have a slight transparency */
-        .css-1d391kg {
-            background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
-        }
-    
-        /* Optional: Customize the main content area background (if needed) */
-        .css-18e3th9 {
-            background-color: transparent;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
     st.header("Page 5: Conclusion")
+    
+
     st.write("""
     Through this analysis, we have uncovered key insights about the various factors influencing sleep quality:
-    1. **Consumption habits** like caffeine and alcohol consumption have a notable impact on sleep efficiency, with alcohol showing a stronger negative correlation.
-    2. **Stress levels** and **physical activity** play a significant role in sleep quality, with higher physical activity linked to better sleep outcomes.
-    3. In the case of **rail workers**, job insecurity and work surges directly contribute to reduced sleep quality, highlighting the importance of addressing job-related stress.
-    By addressing these factors, individuals and organizations can take steps toward improving sleep health and overall well-being.
     """)
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.write("""
+        1. **Consumption habits** like caffeine and alcohol consumption have a notable impact on sleep efficiency, with alcohol showing a stronger negative correlation.
+        """)
+    with col2:
+        st.write("""
+        2. **Stress levels** and **physical activity** play a significant role in sleep quality, with higher physical activity linked to better sleep outcomes.
+        """)
+    with col3:
+        st.write("""
+        3. In the case of **rail workers**, job insecurity and work surges directly contribute to reduced sleep quality, highlighting the importance of addressing job-related stress.
+        By addressing these factors, individuals and organizations can take steps toward improving sleep health and overall well-being.
+        """)
 
 
 
