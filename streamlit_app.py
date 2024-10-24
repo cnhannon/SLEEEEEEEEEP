@@ -268,8 +268,8 @@ elif page == "Consumption Habits & Sleep Efficiency":
             title="Sleep Duration by Alcohol & Caffeine Levels"
         )
         fig_sleep_duration.update_layout(
-            paper_bgcolor='rgba(255,255,255,0.8)',  # Background for outside the chart (paper)
-            plot_bgcolor='rgba(255,255,255,0.8)'    # Background for the chart area (plot)
+            paper_bgcolor='#1E0748',  # Background for outside the chart (paper)
+            plot_bgcolor='#1E0748'    # Background for the chart area (plot)
         )
         st.plotly_chart(fig_sleep_duration)
     
