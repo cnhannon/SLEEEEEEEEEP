@@ -642,7 +642,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
 
         df_clean['SLEEP_CATEGORY'] = df_clean['SLEEP_HOURS'].apply(categorize_sleep)
 
-        st.subheader("Distribution of Sleep Categories")
+        #st.subheader("Distribution of Sleep Categories")
         # fig, ax = plt.subplots()
         # sns.countplot(x='SLEEP_CATEGORY', data=df_clean, palette='Set3', ax=ax)
         # ax.set_title("Distribution of Sleep Categories", fontsize=16)
