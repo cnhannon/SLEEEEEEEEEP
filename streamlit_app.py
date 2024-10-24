@@ -384,10 +384,10 @@ elif page == "Lifestyle Factors & Stress":
     #st.write(":information_source: **Key Sleep Definitions**")
 
     col1, col2, col3 = st.columns(3)
-
+    
     # Graph 4: Stress vs Sleep Quality - Scatter plot
     with col1:
-        fig4 = px.scatter(health_and_lifestyle_data, x="Stress_Level", y="Quality_of_Sleep", x="Stress Level", y="Quality of Sleep", trendline="ols", title="Stress Levels vs Quality of Sleep", color_discrete_sequence=["#32CD32"])
+        fig4 = px.scatter(health_and_lifestyle_data, x="Stress_Level, y="Quality_of_Sleep", trendline="ols", title="Stress Levels vs Quality of Sleep", color_discrete_sequence=["#32CD32"], labels={“Stress_level”: “Stress Level”, “Quality_of_sleep”: “Quality of Sleep”}) # Custom labels for x and y)
         st.plotly_chart(fig4, use_container_width=True)
     
     # Graph 5: Physical Activity vs Sleep Quality - Bar plot (changed from line plot)
