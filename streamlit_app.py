@@ -105,7 +105,8 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # ------------------------------------------
     # ADDED
-    st.subheader("Dataset: Sleep Efficiency Dataset")
+    st.subheader("[Dataset: Sleep Efficiency Dataset](https://www.kaggle.com/code/hexenmeiser/sleep-efficiency-dataset-eda-and-scoring)")
+    #st.markdown("[Click here to visit Streamlit's website](https://streamlit.io)")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
     with st.expander("**Key Terms**"):
