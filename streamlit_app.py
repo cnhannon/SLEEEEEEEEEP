@@ -661,7 +661,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         st.plotly_chart(fig)
 
         # Average Sleep Hours by Age and Gender
-        st.subheader("Average Sleep Hours by Age and Gender")
+        #st.subheader("Average Sleep Hours by Age and Gender")
         # avg_sleep_by_age_gender = df_clean.groupby(['AGE', 'GENDER'])['SLEEP_HOURS'].mean().unstack()
         # fig, ax = plt.subplots(figsize=(10, 6))
         # avg_sleep_by_age_gender.plot(kind='bar', ax=ax)
@@ -722,7 +722,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
 
 
         # Regression Plot: Sleep Hours vs Daily Stress
-        st.subheader("Sleep Hours vs Daily Stress")
+        #st.subheader("Sleep Hours vs Daily Stress")
 
         # fig, ax = plt.subplots(figsize=(8, 6))
         # sns.regplot(x=df_clean['SLEEP_HOURS'], y=df_clean['DAILY_STRESS'], scatter_kws={'s':50}, line_kws={'color':'blue'}, ax=ax)
