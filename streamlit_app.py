@@ -637,7 +637,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         """,
         unsafe_allow_html=True
     )
-    st.title("Lifestyle and Wellbeing Analysis")
+    st.title("Lifestyle and Wellbeing Analysis :yin_yang")
     st.header("Dataset: Lifestyle and Wellbeing")
     with st.expander("**Key Terms**"):
         st.markdown("""
