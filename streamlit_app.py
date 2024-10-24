@@ -267,10 +267,12 @@ elif page == "Consumption Habits & Sleep Efficiency":
             filtered_df, x="Alcohol_consumption", y="Sleep_Duration", color="Caffeine_consumption",
             title="Sleep Duration by Alcohol & Caffeine Levels"
         )
+        """
         fig_sleep_duration.update_layout(
             paper_bgcolor='#1E0748',  # Background for outside the chart (paper)
             plot_bgcolor='#1E0748'    # Background for the chart area (plot)
         )
+        """
         st.plotly_chart(fig_sleep_duration)
     
     # !! Deleted a line chart !!
@@ -293,10 +295,12 @@ elif page == "Consumption Habits & Sleep Efficiency":
             yaxis_title="Sleep Duration (hours)",
             showlegend=True
         )
+        """
         fig_sleep_proportions_alcohol.update_layout(
             paper_bgcolor='#1E0748',  # Background for outside the chart (paper)
             plot_bgcolor='#1E0748'    # Background for the chart area (plot)
         )
+        """
         st.plotly_chart(fig_sleep_proportions_alcohol)
 
     with col3:
@@ -343,6 +347,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
     plt.title('Sleep Efficiency by Age Group and Gender', fontsize=16)
     plt.xlabel('Gender', fontsize=12)
     plt.ylabel('Age Group', fontsize=12)
+
     
     # Show the heatmap using Streamlit
     st.pyplot(plt)
