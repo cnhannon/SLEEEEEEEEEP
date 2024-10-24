@@ -44,7 +44,14 @@ if page == "Home":
         """,
         unsafe_allow_html=True
     )
-    st.title("SLEEEEEEEEEP :zzz:")
+    st.markdown(
+        """
+        <h1 style='color:#1f77b4;'>SLEEEEEEEEEP 😴</h1>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    #st.title("SLEEEEEEEEEP :zzz:")
 
     col1, col2, col3 = st.columns(3)
     with col1:
