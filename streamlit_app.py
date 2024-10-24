@@ -14,10 +14,36 @@ rail_workers_data = pd.read_csv("rail_workers_sleep_data.csv")
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Introduction", "Consumption Habits & Sleep Efficiency", "Lifestyle Factors & Stress", "Lifestyle and Wellbeing Analysis", "Work-Related Stress & Sleep", "Conclusion"])
+page = st.sidebar.radio("Go to", ["Home", "Introduction", "Consumption Habits & Sleep Efficiency", "Lifestyle Factors & Stress", "Lifestyle and Wellbeing Analysis", "Work-Related Stress & Sleep", "Conclusion"])
 
 
 # ------------------------------------------------------------------------------------------------
+
+if page == "Home":
+    st.markdown(
+        """
+        <style>
+        /* Apply the background image to the entire app */
+        .stApp {
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/02.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        /* Optional: Customize the sidebar to have a slight transparency */
+        .css-1d391kg {
+            background: rgba(255, 255, 255, 0.1);  /* Adjust transparency */
+        }
+    
+        /* Optional: Customize the main content area background (if needed) */
+        .css-18e3th9 {
+            background-color: transparent;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 # -----------------
 # INTRODUCTION PAGE
