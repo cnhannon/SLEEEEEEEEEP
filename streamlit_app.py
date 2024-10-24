@@ -105,7 +105,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
 
     # ------------------------------------------
     # ADDED
-    st.subheader("Sleep Efficiency Dataset")
+    st.subheader("Dataset: Sleep Efficiency Dataset")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
     with st.expander("**Key Terms**"):
@@ -379,7 +379,7 @@ elif page == "Lifestyle Factors & Stress":
     
     st.header("Lifestyle Factors and Stress")
 
-    st.subheader("Sleep Efficiency Dataset")
+    st.subheader("Dataset: Sleep, Health, and Lifestyle")
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
 
@@ -538,6 +538,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         unsafe_allow_html=True
     )
     st.header("Lifestyle and Wellbeing Analysis")
+    st.subheader("Dataset: Lifestyle and Wellbeing")
     with st.expander("**Key Terms**"):
         st.markdown("""
         - **Fruits_Veggies**: How many fruits or vegetables are eaten per day.
@@ -683,6 +684,7 @@ elif page == "Work-Related Stress & Sleep":
         unsafe_allow_html=True
     )
     st.header("Impact of Work-Related Stress on Sleep")
+    st.subheader("US Railworkers Stress")
 
     # KEY TERMS
 #------------
