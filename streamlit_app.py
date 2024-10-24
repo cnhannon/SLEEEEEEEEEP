@@ -87,6 +87,8 @@ if page == "Home":
             """,
             unsafe_allow_html=True
         )
+    # Display an image in your Streamlit app
+    st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", caption="sleeeeeeeeep", use_column_width=True)
     
 
 # -----------------
@@ -1070,5 +1072,4 @@ elif page == "Conclusion":
             - Recognising and addressing these factors can lead to better sleep health and overall well-being for individuals and organisations.
         """
     )
-    # Display an image in your Streamlit app
-    st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", caption="sleeeeeeeeep", use_column_width=True)
+
