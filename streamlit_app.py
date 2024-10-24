@@ -886,7 +886,7 @@ elif page == "Conclusion":
         """,
         unsafe_allow_html=True
     )
-    st.header("Page 5: Conclusion")
+    st.header("Conclusion")
     
 
     st.write("""
