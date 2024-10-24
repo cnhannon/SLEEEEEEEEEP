@@ -95,9 +95,9 @@ if page == "Home":
             unsafe_allow_html=True
         )
 
-    with col4:
-        # Display an image in your Streamlit app
-        st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", use_column_width=True)
+
+    # Display an image in your Streamlit app
+    st.image("https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/Slides Pojecect Lw cont.png", use_column_width=True)
     
 
 # -----------------
