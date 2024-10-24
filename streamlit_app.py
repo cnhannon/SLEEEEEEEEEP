@@ -389,6 +389,27 @@ elif page == "Lifestyle Factors & Stress":
     # Button with an ":information_source:" icon and expander for definitions
     #st.write(":information_source: **Key Sleep Definitions**")
 
+    #Key Insights
+    # --------------------------------------------------------------------------------------------------
+    st.header("Key Insights")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("""
+        - **Higher stress levels are directly linked to poorer sleep quality**: 
+            - As stress increases, participants tend to experience shorter, lighter, and more fragmented sleep.
+        - **Physical activity can help mitigate the negative effects of stress on sleep**:
+            - Those who engage in regular physical activity, even at moderate levels, report better sleep quality and longer sleep duration, despite high stress levels.
+        """)
+    with col2:
+        st.markdown("""
+        - **Occupational impact on sleep**:
+            - Certain high-stress jobs, particularly those with irregular schedules or high demands, are associated with lower sleep quality. Workers in these roles are more likely to report sleep disturbances.
+        - **Balancing stress and activity is key**:
+            - Individuals with lower stress levels and higher physical activity tend to fall into the “optimal sleep” category, getting the recommended 6-8 hours of sleep per night.
+        """)
+    # --------------------------------------------------------------------------------------------------
+    
+    
     col1, col2, col3 = st.columns(3)
     
     # Graph 4: Stress vs Sleep Quality - Scatter plot
