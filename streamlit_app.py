@@ -125,7 +125,7 @@ if page == "Introduction":
 
     # END
 
-    st.title("Sleep, Lifestyle, and Job Factors: A Data Analysis Journey")
+    st.title("Sleep, Lifestyle, and Job Factors: A Data Analysis Journey :chart_with_upwards_trend:")
     st.header("The Modern Sleep Problem")
     st.write("""
     Sleep quality is declining globally, influenced by numerous factors including lifestyle choices, consumption habits, and job-related stress.
