@@ -267,6 +267,10 @@ elif page == "Consumption Habits & Sleep Efficiency":
             filtered_df, x="Alcohol_consumption", y="Sleep_Duration", color="Caffeine_consumption",
             title="Sleep Duration by Alcohol & Caffeine Levels"
         )
+        fig_sleep_duration.update_layout(
+            paper_bgcolor='rgba(255,255,255,0.8)',  # Background for outside the chart (paper)
+            plot_bgcolor='rgba(255,255,255,0.8)'    # Background for the chart area (plot)
+        )
         st.plotly_chart(fig_sleep_duration)
     
     # !! Deleted a line chart !!
