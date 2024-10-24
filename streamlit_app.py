@@ -47,7 +47,7 @@ if page == "Home":
     st.title("SLEEEEEEEEEP")
     st.header("Contributors")
     col1, col2 = st.columns(2)
-    with co1:
+    with col1:
         st.markdown(
             """
             - **Sumeet Joshi**
@@ -56,7 +56,7 @@ if page == "Home":
             unsafe_allow_html=True
         )
 
-    with co2:
+    with col2:
         st.markdown(
             """
         - **Leah Ramsamy**
