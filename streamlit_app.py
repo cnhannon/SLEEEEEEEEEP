@@ -1048,20 +1048,25 @@ elif page == "Conclusion":
     col1, col2, col3 = st.columns(3)
     with col1:
         st.write("""
-        1. **Consumption habits** like caffeine and alcohol consumption have a notable impact on sleep efficiency, with alcohol showing a stronger negative correlation.
+        - **Caffeine and Alcohol Consumption:**
+            - Both significantly impact sleep efficiency.
+            - Alcohol shows a stronger negative correlation with sleep quality.
         """)
     with col2:
         st.write("""
-        2. **Stress levels** and **physical activity** play a significant role in sleep quality, with higher physical activity linked to better sleep outcomes.
+        - **Stress Levels and Physical Activity:**
+            - Higher stress levels are linked to poorer sleep outcomes.
+            - Increased physical activity is associated with improved sleep quality.
         """)
     with col3:
         st.write("""
-        3. In the case of **rail workers**, job insecurity and work surges directly contribute to reduced sleep quality, highlighting the importance of addressing job-related stress.
-        By addressing these factors, individuals and organizations can take steps toward improving sleep health and overall well-being.
+        - **Job-Related Stress in Rail Workers:**
+        - Job insecurity and surges in workload directly contribute to reduced sleep quality.
+        - Addressing job-related stress is crucial for enhancing sleep health.
         """)
     st.write(
         """
-        - **Implications for Improvement**:
+        - **Implications for Improvement:**
             - Recognising and addressing these factors can lead to better sleep health and overall well-being for individuals and organisations.
         """
     )
