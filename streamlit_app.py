@@ -30,7 +30,7 @@ if page == "Introduction":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/06.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/01.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -78,7 +78,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/07.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/02.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -369,7 +369,7 @@ elif page == "Lifestyle Factors & Stress":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/08.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/03.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -530,7 +530,7 @@ elif page == "Lifestyle and Wellbeing Analysis":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/09.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/04.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -669,7 +669,7 @@ elif page == "Work-Related Stress & Sleep":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/10.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/05.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -866,7 +866,7 @@ elif page == "Conclusion":
         <style>
         /* Apply the background image to the entire app */
         .stApp {
-            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/11.png');
+            background: url('https://github.com/cnhannon/sleeeeeeeeep/raw/main/images/06.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
