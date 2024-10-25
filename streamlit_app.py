@@ -970,7 +970,7 @@ elif page == "Work-Related Stress & Sleep":
                 z=sleep_loss_corr_renamed['Sleep Loss'].values.reshape(1, -1),  # reshape for heatmap
                 x=stress_factors_without_sleep_loss,
                 y=['Sleep Loss'],
-                colorscale=[[0, '#FFFFD9'], [1, '#081D58']],
+                colorscale=[[0, '#FFFFD9'], [1, '#1F80B8']],
                 showscale=True,
                 zmin=0.2,  # correlation ranges from -1 to 1
                 zmax=0.6
