@@ -970,7 +970,7 @@ elif page == "Work-Related Stress & Sleep":
                 z=sleep_loss_corr_renamed['Sleep Loss'].values.reshape(1, -1),  # reshape for heatmap
                 x=stress_factors_without_sleep_loss,
                 y=['Sleep Loss'],
-                colorscale=[[0, '#fcd876'], [1, '#130239']],
+                colorscale=[[0, '#FFFFD9'], [1, '#081D58']],
                 showscale=True,
                 zmin=0.2,  # correlation ranges from -1 to 1
                 zmax=0.6
@@ -1049,7 +1049,7 @@ elif page == "Work-Related Stress & Sleep":
                      x='Coefficient',
                      y='Variable',
                      orientation='h',
-                     color_discrete_sequence=['#A2748C'],
+                     color_discrete_sequence=['#F9A002'],
                      title='Top 5 Predictors of Sleep Loss')
 
         # Show the updated plot in Streamlit
