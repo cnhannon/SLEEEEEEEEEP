@@ -909,16 +909,7 @@ elif page == "Work-Related Stress & Sleep":
         - **Time Off**: Emphasising the role of adequate rest periods in reducing sleep-related stress.
         - **Sleep Stress Correlation**: Summarising the relationship between work-related factors and sleep disturbances, especially focusing on stress levels.
         """)
-    # Key Insights section
-    st.subheader("Key Insights :mag:")
-    st.markdown("""
-    - **High Stress Levels**:
-      - Strong correlation with **Sleep Loss**, especially due to lack of control and time off.
-    - **Sleep Loss Impact**:
-      - Increased **Sleep Loss** leads to reduced **Alertness at Work**, creating a negative cycle between stress, poor sleep, and productivity.
-    - **Key Contributors to Sleep Stress**:
-      - Our regression analysis highlights **Lack of Control** and **Insufficient Time Off** as the largest contributors to sleep-related stress.
-    """)
+
 #====================
 
     col1, col2 = st.columns(2)
@@ -1063,6 +1054,17 @@ elif page == "Work-Related Stress & Sleep":
 
         # Show the updated plot in Streamlit
         st.plotly_chart(fig)
+
+        # Key Insights section
+    st.subheader("Key Insights :mag:")
+    st.markdown("""
+    - **High Stress Levels**:
+      - Strong correlation with **Sleep Loss**, especially due to lack of control and time off.
+    - **Sleep Loss Impact**:
+      - Increased **Sleep Loss** leads to reduced **Alertness at Work**, creating a negative cycle between stress, poor sleep, and productivity.
+    - **Key Contributors to Sleep Stress**:
+      - Our regression analysis highlights **Lack of Control** and **Insufficient Time Off** as the largest contributors to sleep-related stress.
+    """)
 
 
 # ----------------------------------------------------------------------------------------------------
