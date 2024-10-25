@@ -216,7 +216,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         """)
         # -------ADDING--------
     # Create three columns but only use col1 and col3
-    col1, col2, col2 = st.columns([1, 1])
+    col1, col2 = st.columns([1, 1])
     # Participant demographics scorecard in column 1
     with col1:
         number_of_participants = 452  # Total number of participants
