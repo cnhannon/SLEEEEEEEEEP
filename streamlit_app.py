@@ -216,7 +216,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
         """)
         # -------ADDING--------
     # Create three columns but only use col1 and col3
-    col1, col2, col3 = st.columns([1, 1, 1])
+    col1, col2, col2 = st.columns([1, 1])
     # Participant demographics scorecard in column 1
     with col1:
         number_of_participants = 452  # Total number of participants
@@ -258,20 +258,7 @@ elif page == "Consumption Habits & Sleep Efficiency":
  #---------------------------------------------------
     #col1, col2=st.columns(2)
     # Key Insights section
-    with col3:
-        st.subheader("Key Insights :mag:")
-        st.markdown("""
-        - **Caffeine’s Impact on REM Sleep**:
-          - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
-        - **Caffeine Consumption**:
-          - Negative impact on **Light Sleep**.
-          - **Stable Sleep Duration** with moderate caffeine intake.
-          - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
-        - **Alcohol Consumption**:
-          - Initial increase in **Light Sleep**.
-          - Decrease in **Light Sleep** with higher alcohol consumption.
-          - **Stable Sleep Duration** regardless of intake.
-        """)
+
 
 
     # ------------------------------------------
@@ -444,7 +431,26 @@ elif page == "Consumption Habits & Sleep Efficiency":
     # Show the heatmap using Streamlit
     st.pyplot(plt)
 
+    st.subheader("Key Insights :mag:")
+    col1, col2 = st.columns(2)
+    with col1:
+    
+        st.markdown("""
+        - **Caffeine’s Impact on REM Sleep**:
+          - Moderate caffeine shows limited disruption, while higher levels show more interference with **REM Sleep**.
+        - **Caffeine Consumption**:
+          - Negative impact on **Light Sleep**.
+          - **Stable Sleep Duration** with moderate caffeine intake.
+          - High caffeine consumption (100 mg – 200 mg) negatively influences **Deep Sleep**.
+        """)
 
+    with col2:
+        st.markdown("""
+        - **Alcohol Consumption**:
+          - Initial increase in **Light Sleep**.
+          - Decrease in **Light Sleep** with higher alcohol consumption.
+          - **Stable Sleep Duration** regardless of intake.
+        """)
     # Display the filtered data summary
     #st.write(f"Filtered Data: {len(filtered_df)} Participants")
     #st.dataframe(filtered_df)
